@@ -1,9 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Sriracha&display=swap');
+
+:root {
+    --font1: "Sriracha";
+    --font2: "Baloo 2";
+    --main-color: #F6D3B3;
+    --cat-color1: #A1DFED;
+    --cat-color2: #FCD4F8;
+    --white1: #F8F8F8;
+    --black1: #282828;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background: var(--white1);
+}
 ul {
     list-style: none;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 16% 74% 10%;
+    align-items: center;
+    height: 8vh;
+    background: var(--main-color);
+}
+
+.left-nav {
+    font-family: var(--font1);
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.center-nav {
+    font-family: var(--font2);
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.nav-items {
+    cursor: pointer;
+}
+
+.background-header {
+    height: 45vh;
+    background: url(./chatons-header.jpg) center / cover;
+    min-width: 100vw;
+    position: relative;
+}
+
+.logo {
+    text-align: center;
+    justify-content: center;
+    height: 350px;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: -5;
 }
