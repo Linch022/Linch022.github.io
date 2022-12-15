@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Sriracha&display=swap');
+
+:root {
+    --font1: "Sriracha";
+    --font2: "Baloo 2";
+    --main-color: #F6D3B3;
+    --cat-color1: #A1DFED;
+    --cat-color2: #FCD4F8;
+    --white1: #F8F8F8;
+    --black1: #282828;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--white1);
+    font-family: var(--font2);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.navbar {
+    display: grid;
+    grid-template-columns: 16% 74% 10%;
+    align-items: center;
+    height: 70px;
+    background: var(--main-color);
+}
+
+.left-nav {
+    font-family: var(--font1);
+    text-align: left;
+    font-size: 1.3rem;
+    padding-left: 20px;
+}
+
+.center-nav {
+    font-family: var(--font2);
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.nav-items {
+    cursor: pointer;
+}
+
+.background-header {
+    height: 400px;
+    background: url(./chatons-header.jpg) center / cover;
+    min-width: 100%;
+}
+
+.main-title,
+.second-title {
+    text-align: center;
+    font-family: var(--font1);
+}
+
+.main-title {
+    font-size: 2.3rem;
+}
+.second-title {
+    margin-top: -15px;
+}
+
+.homepage-main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homepage-main-text-container {
+    width: 50%;
+    min-height: 400px;
+    margin-left: 30px;
+    font-size: 1.1rem;
+    line-height: 30px;
+}
+
+.main-text-title,
+.blog-title {
+    font-size: 1.5rem;
+    padding: 30px 0;
+    font-family: var(--font1);
+}
+
+.blog-title {
+    text-align: center;
+}
+.blog-text-container {
+    width: 30%;
+    background-color: var(--main-color);
+    border-radius: 30px;
+    margin-right: 30px;
+}
+
+.blog-list {
+    display: flex;
+    line-height: 50px;
+    margin-top: -10px;
+    margin-left: 20px;
+    min-height: 360px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.link-adoption,
+.link-formulaire {
+    font-weight: bold;
+}
+
+.footer-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 45% 10%;
+    background-color: var(--main-color);
+    margin-top: 100px;
+    height: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.left-footer,
+.middle-footer,
+.right-footer {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.right-footer-social {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
