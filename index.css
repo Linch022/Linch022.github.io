@@ -20,15 +20,20 @@ body {
     background: var(--white1);
     font-family: var(--font2);
 }
+
 ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 .navbar {
     display: grid;
     grid-template-columns: 16% 74% 10%;
     align-items: center;
-    height: 8vh;
+    height: 70px;
     background: var(--main-color);
 }
 
@@ -36,6 +41,7 @@ ul {
     font-family: var(--font1);
     text-align: left;
     font-size: 1.3rem;
+    padding-left: 20px;
 }
 
 .center-nav {
@@ -58,9 +64,9 @@ ul {
 }
 
 .background-header {
-    height: 45vh;
+    height: 400px;
     background: url(./chatons-header.jpg) center / cover;
-    min-width: 100vw;
+    min-width: 100%;
 }
 
 .main-title,
@@ -86,6 +92,7 @@ ul {
     min-height: 400px;
     margin-left: 30px;
     font-size: 1.1rem;
+    line-height: 30px;
 }
 
 .main-text-title,
@@ -95,19 +102,53 @@ ul {
     font-family: var(--font1);
 }
 
-.blog-text-container {
-    width: 35%;
+.blog-title {
     text-align: center;
+}
+.blog-text-container {
+    width: 30%;
     background-color: var(--main-color);
     border-radius: 30px;
     margin-right: 30px;
 }
 
 .blog-list {
+    display: flex;
     line-height: 50px;
     margin-top: -10px;
+    margin-left: 20px;
+    min-height: 360px;
+    align-items: center;
+    font-weight: bold;
 }
 
-.article-name {
-    cursor: pointer;
+.link-adoption,
+.link-formulaire {
+    font-weight: bold;
+}
+
+.footer-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 45% 10%;
+    background-color: var(--main-color);
+    margin-top: 100px;
+    height: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.left-footer,
+.middle-footer,
+.right-footer {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.right-footer-social {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
