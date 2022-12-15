@@ -18,6 +18,7 @@
 
 body {
     background: var(--white1);
+    font-family: var(--font2);
 }
 ul {
     list-style: none;
@@ -60,16 +61,53 @@ ul {
     height: 45vh;
     background: url(./chatons-header.jpg) center / cover;
     min-width: 100vw;
-    position: relative;
 }
 
-.logo {
+.main-title,
+.second-title {
     text-align: center;
-    justify-content: center;
-    height: 350px;
-    top: 140px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    z-index: -5;
+    font-family: var(--font1);
+}
+
+.main-title {
+    font-size: 2.3rem;
+}
+.second-title {
+    margin-top: -15px;
+}
+
+.homepage-main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homepage-main-text-container {
+    width: 50%;
+    min-height: 400px;
+    margin-left: 30px;
+    font-size: 1.1rem;
+}
+
+.main-text-title,
+.blog-title {
+    font-size: 1.5rem;
+    padding: 30px 0;
+    font-family: var(--font1);
+}
+
+.blog-text-container {
+    width: 35%;
+    text-align: center;
+    background-color: var(--main-color);
+    border-radius: 30px;
+    margin-right: 30px;
+}
+
+.blog-list {
+    line-height: 50px;
+    margin-top: -10px;
+}
+
+.article-name {
+    cursor: pointer;
 }
