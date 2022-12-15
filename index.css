@@ -33,7 +33,7 @@ a {
     display: grid;
     grid-template-columns: 16% 74% 10%;
     align-items: center;
-    height: 70px;
+    height: 50px;
     background: var(--main-color);
 }
 
