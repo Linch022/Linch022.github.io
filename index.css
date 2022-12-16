@@ -156,20 +156,28 @@ a {
 /* Eléments de la page 2 ------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------*/
-
+.cat-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
 .cat-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
-    margin: 50px 50px;
+}
+
+.hidden-cards-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 .hidden-cards {
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 25px;
-        margin: 50px 50px;
-    
+        margin-bottom: 25px;
 }
 
 .load-button {
@@ -197,6 +205,7 @@ input[type=checkbox].hidden{
 
 .hidden:checked ~ .hidden-cards {
     display: grid;
+
 }
 
 .cat-card-male {
