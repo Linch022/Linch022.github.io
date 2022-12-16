@@ -31,9 +31,9 @@ a {
 }
 .navbar {
     display: grid;
-    grid-template-columns: 16% 74% 10%;
+    grid-template-columns: 20% 70% 10%;
     align-items: center;
-    height: 50px;
+    height: 90px;
     background: var(--main-color);
 }
 
@@ -151,4 +151,63 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+/* Eléments de la page 2 ------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------*/
+
+.cat-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin: 50px 50px;
+}
+
+.cat-card-male {
+    display: grid;
+    grid-template-columns: 190px 190px;
+    grid-template-rows: 30% 70%;
+    background: var(--cat-color1);
+    border-radius: 40px;
+    text-align: center;
+}
+
+.cat-card-female {
+    display: grid;
+    grid-template-columns: 190px 190px;
+    grid-template-rows: 30% 70%;
+    background: var(--cat-color2);
+    border-radius: 40px;
+    text-align: center;
+}
+
+.img-cat {
+    height: 180px;
+    width: 180px;
+    border-radius: 65px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 10px;
+}
+
+.cat-name {
+    margin-top: 20px;
+    line-height: 20px;
+    font-size: 1.3rem;
+}
+
+.cat-info {
+    font-size: 0.8rem;
+    font-weight: normal;
+    font-style: italic;
+    font-family: var(--font1);
+}
+
+.cat-description {
+    display: flex;
+    margin: 0px 15px 20px 15px;
+    font-size: 0.7rem;
+    align-items: center;
+
 }
