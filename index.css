@@ -73,8 +73,8 @@ a {
 }
 
 .background-header {
-    height: 550px;
-    background: url(./chatons-header.jpg) center / cover;
+    height: 450px;
+    background: url(./chatons-header.jpg) 50% 40% / cover no-repeat;
     min-width: 100%;
 }
 
