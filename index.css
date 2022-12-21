@@ -19,6 +19,7 @@
 body {
     background: var(--white1);
     font-family: var(--font2);
+    color: var(--black1);
 }
 
 ul {
@@ -27,20 +28,24 @@ ul {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #282828;
 }
-.navbar {
+
+#navbar {
+    width: 100%;
+    position: fixed;
     display: grid;
     grid-template-columns: 20% 70% 10%;
     align-items: center;
-    height: 90px;
+    height: 60px;
     background: var(--main-color);
+    transition: 0.3s;
 }
 
 .left-nav {
     font-family: var(--font1);
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding-left: 20px;
 }
 
@@ -61,10 +66,14 @@ a {
 
 .nav-items {
     cursor: pointer;
+    transition: 0.3s;
+}
+.nav-items:hover {
+    transform: scale(1.2);
 }
 
 .background-header {
-    height: 400px;
+    height: 550px;
     background: url(./chatons-header.jpg) center / cover;
     min-width: 100%;
 }
@@ -85,20 +94,26 @@ a {
 .homepage-main-container {
     display: flex;
     justify-content: space-between;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .homepage-main-text-container {
     width: 50%;
     min-height: 400px;
-    margin-left: 30px;
     font-size: 1.1rem;
     line-height: 30px;
 }
 
-.main-text-title,
-.blog-title {
+.main-text-title {
     font-size: 1.5rem;
     padding: 30px 0;
+    font-family: var(--font1);
+}
+
+.blog-title {
+    padding-top: 20px;
+    font-size: 1.5rem;
     font-family: var(--font1);
 }
 
@@ -109,7 +124,9 @@ a {
     width: 30%;
     background-color: var(--main-color);
     border-radius: 30px;
-    margin-right: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 4px 5px #f6d3b3;
 }
 
 .blog-list {
@@ -147,18 +164,108 @@ a {
     padding-right: 20px;
 }
 
+.items-footer {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.items-footer:hover {
+    transform: scale(1.2);
+}
+
 .right-footer-social {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.cat-card {
-    transition: 0.3s ease-in-out;
+
+.infos {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-around;
 }
-.cat-card:hover {
-transform: scale(1.1);
-transition: 0.3s ease-in-out;
+
+hr {
+    width: 50%;
+    margin: 80px auto 125px auto;
+    height: 5px;
+    border : 0;
+    border-radius: 3000px;
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 2px 1px #f6d3b3;
 }
+.find-us {
+    font-size: 1.1rem;
+    background: var(--main-color);
+    width: 500px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 0px 4px 5px #f6d3b3;
+}
+
+
+.find-us-title {
+    font-size: 1.5rem;
+    padding: 30px 0;
+    font-family: var(--font1);
+}
+#map {
+    height: 300px;
+    width: 400px;
+    border: 3px;
+    margin: 0 auto;
+}
+
+#fripons-adress {
+    font-family: var(--font1);
+}
+
+.find-us p {
+    line-height: 30px;
+    padding: 10px;
+}
+
+.contact-us {
+    background: var(--main-color);
+    border-radius: 100px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 4px 5px #f6d3b3;
+}
+.contact-us form{
+    height: 80%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr 1fr 2fr ;
+    font-size: 1.1rem;
+}
+
+.contact-us form input {
+    height: 40px;
+    font-size: 1rem;
+    font-family: var(--font2);
+    color: #2828289a;
+}
+
+#textarea {
+    resize: none;
+    height: 100%;
+    font-family: var(--font2);
+    font-size: 1.1rem;
+    color: #2828289a;
+}
+
+/*Slider team------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------*/
+
+
+
 
 /* Eléments de la page 2 ------------------------------------------------------------------------------
 
@@ -215,6 +322,15 @@ input[type=checkbox].hidden{
 .hidden:checked ~ .hidden-cards {
     display: grid;
 
+}
+
+.cat-card {
+    transition: 0.3s ease-in-out;
+}
+
+.cat-card:hover {
+transform: scale(1.1);
+transition: 0.3s ease-in-out;
 }
 
 .cat-card-male {

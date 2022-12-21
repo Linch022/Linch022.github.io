@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav id="navbar">
         <span class="left-nav">LES PETITS FRIPONS</span>
         <ul class="center-nav">
           <li class="nav-items"><a href="#"> Accueil</a></li>
@@ -65,14 +65,14 @@
               refuge du lundi au samedi entre 10h et 19h, nos bénévoles seront
               ravis de vous accueillir. <br />
               <span class="link-adoption">
-                <a href="#">
+                <a href="page2.html">
                   Vous pouvez commencer à rechercher votre futur meilleur ami
                   dès maintenant.
                 </a>
               </span>
               <br />
-              Si vous souhaitez commencer la procédure d'adoption,
-              remplissez<span class="link-formulaire"
+              Si vous souhaitez adopter l'un de nos fripons, remplissez<span
+                class="link-formulaire"
                 ><a href="#"> ce formulaire.</a>
               </span>
             </p>
@@ -110,29 +110,61 @@
           </div>
         </div>
       </section>
+      <hr />
+      <section class="infos">
+        <div class="find-us">
+          <h3 class="find-us-title">Pour nous rendre visite</h3>
+          <iframe
+            id="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44538.52531185043!2d4.800110750995634!3d45.75800523486926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1671627139931!5m2!1sfr!2sfr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p>
+            <span id="fripons-adress">LES PETITS FRIPONS</span> <br />
+            36 rue des fripons <br />
+            69000 Lyon <br />
+            06 00 00 00 00
+          </p>
+        </div>
+        <div class="contact-us">
+          <form>
+            <label for="name">Votre prénom :</label
+            ><input type="text" id="name" placeholder="John" />
+            <label for="lastname">Votre nom :</label
+            ><input type="text" id="lastname" placeholder="Doe" />
+            <label for="email">Votre email :</label
+            ><input type="text" id="email" placeholder="John.Doe@john.com" />
+            <label for="textarea" id="lable-textarea">Votre message : </label>
+            <textarea name="message" id="textarea">Écrivez nous ici !</textarea>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer-container">
         <div class="left-footer">
-          <span><a href="#"> Contactez-nous</a></span>
+          <span class="items-footer"><a href="#">Nous rejoindre</a></span>
         </div>
         <div class="middle-footer">
-          <span><a href="#"> Mentions légales</a></span>
+          <span class="items-footer"><a href="#">Mentions légales</a></span>
         </div>
         <div class="right-footer">
           <ul class="right-footer-social">
-            <li class="nav-items-footer">
+            <li class="items-footer">
               <i class="fa-brands fa-facebook-f"></i>
             </li>
-            <li class="nav-items-footer">
+            <li class="items-footer">
               <i class="fa-brands fa-instagram"></i>
             </li>
-            <li class="nav-items-footer">
+            <li class="items-footer">
               <i class="fa-brands fa-twitter"></i>
             </li>
           </ul>
         </div>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
