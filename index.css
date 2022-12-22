@@ -124,7 +124,6 @@ a {
     border-radius: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
-    box-shadow: 0px 0px 4px 5px #f6d3b3;
 }
 
 .blog-list {
@@ -191,7 +190,6 @@ hr {
     border : 0;
     border-radius: 3000px;
     background-color: var(--main-color);
-    box-shadow: 0px 0px 2px 1px #f6d3b3;
 }
 .find-us {
     font-size: 1.1rem;
@@ -201,7 +199,6 @@ hr {
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: 0px 0px 4px 5px #f6d3b3;
 }
 
 
@@ -233,7 +230,6 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 4px 5px #f6d3b3;
 }
 .contact-us form{
     height: 80%;
@@ -337,7 +333,6 @@ input[type=checkbox].hidden{
 
 .cat-card:hover {
 transform: scale(1.1);
-transition: 0.3s ease-in-out;
 }
 
 .cat-card-male {
@@ -400,7 +395,7 @@ transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 600px) {
-    /*---------HEADER ----------*/
+    /*--------- COMMON ----------*/
     #navbar {
         grid-template-rows: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
@@ -420,6 +415,99 @@ transition: 0.3s ease-in-out;
     .right-nav {
         grid-area: c;
     }
+
+    .main-title {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    /*---------PAGE 1 ----------*/
+
+.title-container {
+    margin: 30px auto;
+}
+
+.second-title {
+    font-size: 1.7rem;
+}
+
+.homepage-main-container {
+    flex-direction: column;
+    margin: 30px 15px 50px 15px;
+}
+
+.homepage-main-text-container {
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.main-text-title {
+    font-size: 1.5rem;
+    padding: 0 0 20px 0;
+}
+
+.blog-text-container {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.blog-list {
+    line-height: 40px;
+    font-size: 0.9rem;
+    margin: auto 15px;
+    min-height: fit-content;
+}
+
+.article-name {
+    line-height: 20px;
+    margin: 20px 0;
+} 
+
+hr {
+    margin: 50px auto;
+}
+
+.infos {
+    flex-direction: column;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.find-us {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.find-us-title {
+    font-size: 1.3rem;
+}
+
+#map {
+    width: 80%;
+    height: 200px
+}
+
+.contact-us {
+    width: 100%;
+    border-radius: 30px;
+    margin: 50px auto 0 auto;
+    height: 350px;
+    font-size: 0.8rem;
+}
+
+.contact-us form {
+    row-gap: 15px;
+    width: 90%;
+    font-size: 0.9rem;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 30px 30px 30px 90px 30px;
+}
+.contact-us form input {
+    height: 30px;
+}
+#label-textarea {
+    vertical-align: middle;
+}
     /*---------PAGE 2 ----------*/
 
     .background-header {
@@ -427,10 +515,6 @@ transition: 0.3s ease-in-out;
         background-position: top;
     }
 
-    .main-title {
-        font-size: 1.4rem;
-        margin-top: 20px;
-    }
     .cat-card-container, .hidden-cards { 
         grid-template-columns: 1fr;
 
@@ -461,4 +545,8 @@ transition: 0.3s ease-in-out;
     .right-footer {
         display: none;
     }
+
+    .cat-card:hover {
+        transform: scale(1);
+        }
 }
