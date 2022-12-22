@@ -40,12 +40,12 @@ a {
     height: 60px;
     background: var(--main-color);
     transition: 0.3s;
+    font-size: 1.1rem;
 }
 
 .left-nav {
     font-family: var(--font1);
     text-align: left;
-    font-size: 1.1rem;
     padding-left: 20px;
 }
 
@@ -54,14 +54,12 @@ a {
     display: flex;
     justify-content: space-around;
     text-align: left;
-    font-size: 1.1rem;
 }
 
 .right-nav {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-size: 1.1rem;
 }
 
 .nav-items {
@@ -242,7 +240,7 @@ hr {
     width: 80%;
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 1fr 1fr 1fr 2fr ;
+    grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
     font-size: 1.1rem;
 }
 
@@ -269,7 +267,6 @@ hr {
 
 #submit {
     width: 40%;
-    align-items: left;
 }
 /*Slider team------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------*/
@@ -403,7 +400,26 @@ transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 600px) {
-    
+    /*---------HEADER ----------*/
+    #navbar {
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        font-size: 1rem;
+        grid-template-areas: "a c"
+                             "b b";
+    }
+    .left-nav {
+    grid-area: a;
+    padding: 0;
+    text-align: center;
+    }
+    .center-nav {
+        grid-area: b;
+    }
+
+    .right-nav {
+        grid-area: c;
+    }
     /*---------PAGE 2 ----------*/
 
     .background-header {
