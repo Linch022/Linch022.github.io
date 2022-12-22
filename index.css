@@ -242,7 +242,7 @@ hr {
     width: 80%;
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 1fr 1fr 1fr 2fr ;
+    grid-template-rows: 1fr 1fr 1fr 2fr 1fr ;
     font-size: 1.1rem;
 }
 
@@ -259,6 +259,17 @@ hr {
     font-family: var(--font2);
     font-size: 1.1rem;
     color: #2828289a;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#submit {
+    width: 40%;
+    align-items: left;
 }
 
 /*Slider team------------------------------------------------------------------------------------------
