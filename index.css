@@ -240,6 +240,11 @@ hr {
     flex-direction: column;
     margin-bottom: 125px;
 }
+#form-category {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    font-family: var(--font2);
+}
 .contact-us form{
     height: 80%;
     width: 80%;
@@ -302,12 +307,6 @@ hr {
     height: var(--card-height);
     min-width: var(--carousel-min-width);
     transition: filter .3s ease;
-  }
-  
-  @media screen and (max-width: 640px) {
-    .card-carousel {
-      margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
-    }
   }
   
   .card-carousel.smooth-return {
@@ -517,7 +516,14 @@ transform: scale(1.1);
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
+    .card-carousel {
+      margin-left: calc((100vw - var(--carousel-min-width) - 30px) / 2)
+    }
+  }
+
+
+@media screen and (max-width: 640px) {
     /*--------- COMMON ----------*/
     #navbar {
         grid-template-rows: 2fr 1fr;
@@ -572,6 +578,7 @@ transform: scale(1.1);
 .blog-text-container {
     width: 100%;
     margin-bottom: 0px;
+    margin-top: 50px;
 }
 
 .blog-list {
@@ -614,8 +621,11 @@ hr {
     width: 100%;
     border-radius: 30px;
     margin: 50px auto 0 auto;
-    height: 350px;
     font-size: 0.8rem;
+    min-height: 0px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    padding-bottom: 20px ;
 }
 
 .contact-us form {
@@ -631,6 +641,8 @@ hr {
 #label-textarea {
     vertical-align: middle;
 }
+
+
     /*---------PAGE 2 ----------*/
 
     .background-header {
