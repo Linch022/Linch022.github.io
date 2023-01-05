@@ -240,6 +240,11 @@ hr {
     flex-direction: column;
     margin-bottom: 125px;
 }
+#form-category {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    font-family: var(--font2);
+}
 .contact-us form{
     height: 80%;
     width: 80%;

@@ -1,3 +1,6 @@
+/*------------
+-----NAVBAR---
+--------------*/
 let navBarScroll = 0;
 
 window.addEventListener("scroll", () => {
@@ -10,6 +13,9 @@ window.addEventListener("scroll", () => {
     navBarScroll =  window.scrollY;
 });
 
+/*-----------------
+-----CAROUSEL TEAM-
+-------------------*/
 const cardsContainer = document.querySelector(".card-carousel");
 const cardsController = document.querySelector(".card-carousel + .card-controller")
 
@@ -331,3 +337,56 @@ class CardCarousel extends DraggingEvent {
 }
 
 const carousel = new CardCarousel(cardsContainer)
+
+/*----------------
+---DISPLAY FORM---
+ -----------------*/
+let formCategory = document.getElementById("form-category");
+const submitForm = document.getElementById("form");
+
+
+submitForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formCategory = formCategory.value;
+
+  if (validateForm()) {
+
+    if (formCategory === "contact") {
+      alert("Merci pour votre message nous y répondrons rapidement");
+    } else if (formCategory === "adoption") {
+      alert("Merci pour votre demande d'adoption, nous allons prendre contact avec vous");
+    } else if (formCategory === "volunteer") {
+      alert("Nous avons pris en compte votre souhait de nous rejoindre, nous allons prendre contact avec vous");
+    }
+  } return submitForm.reset();
+});
+
+function validateForm() {
+  
+  let w = document.getElementById("name").value;
+  let x = document.getElementById("lastname").value;
+  let y = document.getElementById("email").value;
+  let z = document.getElementById("textarea").value;
+  console.log(z)
+  if (w === "") {
+    alert("Merci de renseigner votre prénom");
+    return false;
+  }
+  if (x === "") {
+    alert("Merci de renseigner votre nom");
+    return false;
+  }
+  if (y === "") {
+    alert("Merci de renseigner votre Email");
+    return false;
+  }
+  if (z === "" ) {
+    alert("Merci d'écrire votre message");
+    return false;
+  } else {
+    return true;
+  }
+
+
+}
+
