@@ -367,7 +367,6 @@ function validateForm() {
   let x = document.getElementById("lastname").value;
   let y = document.getElementById("email").value;
   let z = document.getElementById("textarea").value;
-  console.log(z)
   if (w === "") {
     alert("Merci de renseigner votre prénom");
     return false;

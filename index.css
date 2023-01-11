@@ -217,8 +217,10 @@ hr {
 #map {
     height: 300px;
     width: 80%;
-    border: 3px;
+    border:solid 3px var(--black1);
     margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 12px 4px 20px 0px #00000054;;
 }
 
 #fripons-adress {
@@ -245,6 +247,7 @@ hr {
     font-size: 1.1rem;
     font-family: var(--font2);
 }
+
 .contact-us form{
     height: 80%;
     width: 80%;
@@ -253,13 +256,28 @@ hr {
     grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
     font-size: 1.1rem;
     grid-row-gap: 35px;
+    padding-bottom: 30px;
 }
 
-.contact-us form input {
+.contact-us form input, #textarea {
     height: 40px;
     font-size: 1rem;
     font-family: var(--font2);
-    color: #2828289a;
+    color: #282828;
+    border-radius: 10px;
+    border: solid 2px var(--black1);
+    box-shadow: 12px 4px 20px 0px #00000054;;
+    padding: 5px;
+}
+
+#form-category {
+    height: 40px;
+    font-size: 1rem;
+    font-family: var(--font2);
+    color: #282828;
+    border-radius: 10px;
+    border: solid 2px var(--black1);
+    box-shadow: 12px 4px 20px 0px #00000054;;
 }
 
 #textarea {
