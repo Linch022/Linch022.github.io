@@ -219,7 +219,7 @@ hr {
     width: 80%;
     border:solid 3px var(--black1);
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 12px 4px 20px 0px #00000054;;
 }
 
@@ -264,7 +264,7 @@ hr {
     font-size: 1rem;
     font-family: var(--font2);
     color: #282828;
-    border-radius: 10px;
+    border-radius: 4px;
     border: solid 2px var(--black1);
     box-shadow: 12px 4px 20px 0px #00000054;;
     padding: 5px;
@@ -275,7 +275,7 @@ hr {
     font-size: 1rem;
     font-family: var(--font2);
     color: #282828;
-    border-radius: 10px;
+    border-radius: 4px;
     border: solid 2px var(--black1);
     box-shadow: 12px 4px 20px 0px #00000054;;
 }
