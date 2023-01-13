@@ -21,8 +21,8 @@ body {
     overflow: hidden;
     font-family: var(--main-font);
     color: var(--text-color);
-    text-shadow: 0 0 9px var(--textshadow-color),
-    0px 0px 9px var(--textshadow-color);
+    text-shadow: 0 0 10px var(--textshadow-color),
+    0px 0px 10px var(--textshadow-color);
 }
 
 ul {
@@ -78,7 +78,7 @@ a {
 
 
 /* ----------------------------------HOMEPAGE ----------------------------------------------------------- */
-#background-video {
+.background-video {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
@@ -194,11 +194,10 @@ a {
 
 #body-cv {
     background: var(--background-color);
-    overflow: scroll;
 }
 
 .cv-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     position: absolute;
     text-shadow: 0 0 20px var(--textshadow-color),
     0px 0px 60px var(--textshadow-color);
@@ -227,13 +226,37 @@ a {
 
 .cv-container {
     position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+                        "xp hskills formation"
+                        "xp sskills loisirs";
+    width: 100%;
     margin-top: -150px;
     z-index: -1;
-    margin-left: 20px;
     margin-right: 20px;
+    grid-gap: 40px;
+}
+
+.xp-section {
+    grid-area: xp;
+}
+
+.hardskills-section {
+    grid-area: hskills;
+}
+
+.formation-section {
+    grid-area: formation;
+}
+
+.softskills-section {
+    grid-area: sskills;
+}
+
+.loisirs-section {
+    grid-area: loisirs;
 }
 
 .cv-subtitle {
@@ -245,7 +268,6 @@ a {
 
 .cv-section {
     text-align: center;
-    width: 25%;
 }
 
 .subtitles-logo {
@@ -253,11 +275,12 @@ a {
 }
 
 .loisirs-logo {
-    width: 80px;
+    width: 60px;
 }
 
 .date-cv {
-    line-height: 30px;
+    line-height: 20px;
+    margin-bottom: 20px;
 }
 
 .text-cv {
@@ -269,6 +292,15 @@ a {
 .skills {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+}
+
+.experience-text {
+    margin-top: 20px;
+}
+
+.experience-two {
+    margin-top: 50px;
 }
 
 .leftskills {
@@ -278,6 +310,29 @@ a {
 .rightskills {
     text-align: right;
 }
+
+.hardskills {
+    margin-bottom: 50px;
+}
+
+.softskills {
+    position: relative;
+    margin-top: -50px;
+}
+
+.loisirs {
+    position: relative;
+    margin-top: -50px;
+}
+
+.loisirs-container {
+    padding-left: 35px;
+}
+
+.formation {
+    margin-bottom: 70px;
+}
+
 
 #experience-title1 {
     position: absolute;
@@ -305,7 +360,7 @@ a {
 #experience-logo {
     position: absolute;
     top: 15%;
-    left: 84%;
+    left: 90%;
     transform: translateX(-50%);
 }
 
@@ -335,9 +390,40 @@ a {
 #hardskills-logo {
     position: absolute;
     top: 15%;
-    left: 85%;
+    left: 100%;
     transform: translateX(-50%);
 }
+
+#softskills-title1 {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#softskills-title2 {
+    position: absolute;
+    top: -2%;
+    left: 49%;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+
+#softskills-title3 {
+    position: absolute;
+    top: -4%;
+    left: 48%;
+    transform: translateX(-50%);
+    z-index: -3;
+}
+
+#softskills-logo {
+    position: absolute;
+    top: 15%;
+    left: 100%;
+    transform: translateX(-50%);
+}
+
 
 #formation-title1 {
     position: absolute;
@@ -365,6 +451,36 @@ a {
 #formation-logo {
     position: absolute;
     top: 15%;
-    left: 83%;
+    left: 90%;
+    transform: translateX(-50%);
+}
+
+#loisirs-title1 {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#loisirs-title2 {
+    position: absolute;
+    top: -2%;
+    left: 49%;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+
+#loisirs-title3 {
+    position: absolute;
+    top: -4%;
+    left: 48%;
+    transform: translateX(-50%);
+    z-index: -3;
+}
+
+#loisirs-logo {
+    position: absolute;
+    top: 15%;
+    left: 89%;
     transform: translateX(-50%);
 }

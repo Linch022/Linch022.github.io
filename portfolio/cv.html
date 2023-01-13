@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body id="body-cv">
+    <video
+      class="background-video"
+      src="./img/cvbackground.mp4"
+      autoplay
+      loop
+    ></video>
     <header>
       <nav class="navbar">
         <img
@@ -25,15 +31,17 @@
         </div>
       </nav>
     </header>
-    <h1 id="cv-title1" class="cv-title">curiculum vitae</h1>
-    <h1 id="cv-title2" class="cv-title">curiculum vitae</h1>
-    <h1 id="cv-title3" class="cv-title">curiculum vitae</h1>
+    <h1 id="cv-title1" class="cv-title">curriculum vitae</h1>
+    <h1 id="cv-title2" class="cv-title">curriculum vitae</h1>
+    <h1 id="cv-title3" class="cv-title">curriculum vitae</h1>
     <div class="cv-container">
-      <section class="cv-section">
-        <div class="cv-subtitle experience-title">
-          <h2 id="experience-title1">expérience</h2>
-          <h2 id="experience-title2">expérience</h2>
-          <h2 id="experience-title3">expérience</h2>
+      <section class="cv-section xp-section">
+        <div class="cv-subtitle">
+          <div class="experience-title">
+            <h2 id="experience-title1">expérience</h2>
+            <h2 id="experience-title2">expérience</h2>
+            <h2 id="experience-title3">expérience</h2>
+          </div>
           <img
             src="./img/xplogo.png"
             alt="trophée néon"
@@ -42,90 +50,68 @@
           />
         </div>
         <div class="experience-text">
-          <div class="date-cv">
-            <p>
-              2017-2021 <br />
-              manager au kaffee berlin
-            </p>
+          <div class="experience-one">
+            <div class="date-cv">
+              <p>
+                2017-2021 <br />
+                manager - kaffee berlin
+              </p>
+            </div>
+            <div class="text-cv">
+              <p>
+                Gestion d'une équipe de 15 personnes <br />
+                Dynamisation de l'activité <br />
+                Gestion des stocks <br />
+                Contrôle qualité <br />
+                Gestion de logiciel de caisse
+              </p>
+            </div>
           </div>
-          <div class="text-cv">
-            <p>
-              Gestion d'une équipe de 15 personnes <br />
-              Dynamisation de l'activité <br />
-              Gestion des stocks <br />
-              Contrôle qualité <br />
-              Gestion de logiciel de caisse
-            </p>
-          </div>
-          <div class="date-cv">
-            <p>
-              2016-2017 <br />
-              assistant manager au crock'n'roll
-            </p>
-          </div>
-          <p class="text-cv">Gestion d'une équipe de 7 personnes <br /></p>
-        </div>
-      </section>
-      <section class="cv-section">
-        <div class="cv-subtitle hardskills-title">
-          <h2 id="hardskills-title1">hardskills</h2>
-          <h2 id="hardskills-title2">hardskills</h2>
-          <h2 id="hardskills-title3">hardskills</h2>
-          <img
-            src="./img/hslogo.png"
-            alt="brique tetris neon"
-            class="subtitles-logo"
-            id="hardskills-logo"
-          />
-        </div>
-        <div class="skills">
-          <div class="leftskills">
-            <p class="text-cv">
-              HTML <br />
-              JAVASCRIPT <br />
-              REACT <br />
-              CANVA
-            </p>
-          </div>
-          <div class="rightskills">
-            <p class="text-cv">
-              CSS <br />
-              NODEJS <br />
-              EXPRESS <br />
-              SUITE OFFICE
-            </p>
-          </div>
-        </div>
-        <div class="cv-subtitle softskills-title">
-          <h2 id="softskills-title1">softskills</h2>
-          <h2 id="softskills-title2">softskills</h2>
-          <h2 id="softskills-title3">softskills</h2>
-          <img
-            src="./img/softskilllogo.png"
-            alt="cristaux néon"
-            class="subtitles-logo"
-          />
-        </div>
-        <div class="skills">
-          <div class="leftskills">
-            <p class="text-cv">
-              TRAVAIL EN ÉQUIPE <br />
-              RIGUEUR <br />
-              LEADERSHIP <br />
-              GESTION DU STRESS
-            </p>
-          </div>
-          <div class="rightskills">
-            <p class="text-cv">
-              POLYVALENCE <br />
-              BIENVEILLANCE <br />
-              COMMUNICATION <br />
-              AUTODIDACTE
-            </p>
+          <div class="experience-two">
+            <div class="date-cv">
+              <p>
+                2016-2017 <br />
+                assistant manager - crock'n'roll
+              </p>
+            </div>
+            <p class="text-cv">Gestion d'une équipe de 7 personnes <br /></p>
           </div>
         </div>
       </section>
-      <section class="cv-section">
+      <section class="cv-section hardskills-section">
+        <div class="hardskills">
+          <div class="cv-subtitle hardskills-title">
+            <h2 id="hardskills-title1">hardskills</h2>
+            <h2 id="hardskills-title2">hardskills</h2>
+            <h2 id="hardskills-title3">hardskills</h2>
+            <img
+              src="./img/hslogo.png"
+              alt="brique tetris neon"
+              class="subtitles-logo"
+              id="hardskills-logo"
+            />
+          </div>
+          <div class="skills">
+            <div class="leftskills">
+              <p class="text-cv">
+                HTML <br />
+                JAVASCRIPT <br />
+                REACT <br />
+                CANVA
+              </p>
+            </div>
+            <div class="rightskills">
+              <p class="text-cv">
+                CSS <br />
+                NODEJS <br />
+                EXPRESS <br />
+                SUITE OFFICE
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cv-section formation-section">
         <div class="formation">
           <div class="cv-subtitle formation-title">
             <h2 id="formation-title1">formation</h2>
@@ -153,6 +139,39 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="cv-section softskills-section">
+        <div class="softskills">
+          <div class="cv-subtitle softskills-title">
+            <h2 id="softskills-title1">softskills</h2>
+            <h2 id="softskills-title2">softskills</h2>
+            <h2 id="softskills-title3">softskills</h2>
+            <img
+              src="./img/softskilllogo.png"
+              alt="cristaux néon"
+              class="subtitles-logo"
+              id="softskills-logo"
+            />
+          </div>
+          <div class="skills">
+            <div class="leftskills">
+              <p class="text-cv">
+                RIGUEUR <br />
+                LEADERSHIP <br />
+                GESTION DU STRESS
+              </p>
+            </div>
+            <div class="rightskills">
+              <p class="text-cv">
+                POLYVALENCE <br />
+                AUTODIDACTE <br />
+                TRAVAIL EN ÉQUIPE
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cv-section loisirs-section">
         <div class="loisirs">
           <div class="cv-subtitle loisirs-title">
             <h2 id="loisirs-title1">loisirs</h2>
@@ -162,6 +181,7 @@
               src="./img/loisirslogo.png"
               alt="coeur néon"
               class="subtitles-logo"
+              id="loisirs-logo"
             />
           </div>
           <div class="loisirs-container">
