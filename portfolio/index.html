@@ -10,27 +10,111 @@
   <body>
     <video
       class="background-video"
-      src="./img/background2.mp4"
+      src="./img/cvbackground.mp4"
       autoplay
       loop
     ></video>
-    <div id="auto-text-container">
-      <span>bonjour, je suis</span>
-      <h3 id="auto-text"></h3>
-    </div>
-    <div class="link-container">
-      <a href="projet.html"> project </a><br />
-      <a href="cv.html"> cv </a><br />
-      contact
-    </div>
-    <div class="pres-container">
-      <h3 id="pres-title">PRESENTATION</h3>
-      <p class="text-pres">
-        Passionné par l'informatique et les nouvelles techs, j'ai entrepris de
-        me reconvertir en tant que développeur après 10 ans dans la restauration
-        dont 5 ans au poste de manager.
-      </p>
-    </div>
+    <section id="homepage">
+      <div id="auto-text-container">
+        <span>bonjour, je suis</span>
+        <h3 id="auto-text"></h3>
+      </div>
+      <div class="link-container">
+        <a href="projet.html"> projet </a><br />
+        <a href="cv.html"> cv </a><br />
+        contact
+      </div>
+      <div class="pres-container">
+        <h3 id="pres-title">PRESENTATION</h3>
+        <p class="text-pres">
+          Passionné par l'informatique et les nouvelles techs, j'ai entrepris de
+          me reconvertir en tant que développeur après 10 ans dans la
+          restauration dont 5 ans au poste de manager.
+        </p>
+      </div>
+    </section>
+    <div class="space"></div>
+    <section id="projet-section">
+      <h2 id="play-title1" class="section-title">play</h2>
+      <h2 id="play-title2" class="section-title">play</h2>
+      <h2 id="play-title3" class="section-title">play</h2>
+      <div class="projet">
+        <div class="projet-container">
+          <img
+            class="play-button"
+            src="./img/playlogo.png"
+            id="play-button1"
+            alt="bouton play"
+          />
+          <h4 class="projet-title">projet 1</h4>
+          <p class="projet-text">
+            Mon premier projet fait dans le cadre de ma formation Developpeur
+            web en solo
+          </p>
+        </div>
+        <div class="projet-container">
+          <img
+            class="play-button"
+            src="./img/playlogo.png"
+            id="play-button2"
+            alt="bouton play"
+          />
+          <h4 class="projet-title">projet 2</h4>
+          <p class="projet-text">
+            en cours... <br />
+            projet en équipe
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="space"></div>
+    <section id="skills-section">
+      <div class="title-container">
+        <h2 id="skills-title1" class="section-title">skills</h2>
+        <h2 id="skills-title2" class="section-title">skills</h2>
+        <h2 id="skills-title3" class="section-title">skills</h2>
+      </div>
+      <div id="skills-container">
+        <div id="s-container-row1">
+          <img src="./img/html-logo.svg" alt="html" class="skills-icons" />
+          <div class="progressbar-container">
+            <div class="mylevel" id="html-level"></div>
+          </div>
+          <img src="./img/css-logo.svg" alt="css" class="skills-icons" />
+          <div class="progressbar-container">
+            <div class="mylevel" id="css-level"></div>
+          </div>
+        </div>
+        <div id="s-container-row2">
+          <img src="./img/js-logo.svg" alt="js" class="skills-icons" />
+          <div class="progressbar-container">
+            <div class="mylevel" id="js-level"></div>
+          </div>
+          <img src="./img/react-logo.svg" alt="react" class="skills-icons" />
+          <div class="progressbar-container">
+            <div class="mylevel" id="react-level"></div>
+          </div>
+        </div>
+        <div id="s-container-row3">
+          <img src="./img/nodejs-logo.svg" alt="nodejs" class="skills-icons" />
+          <div class="progressbar-container">
+            <div class="mylevel" id="nodejs-level"></div>
+          </div>
+          <img src="./img/canvalogo.svg" alt="canva" class="skills-icons" />
+          <div class="progressbar-container">
+            <div class="mylevel" id="canva-level"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="space"></div>
+    <section id="aboutme-section">
+      <div class="title-container">
+        <h2 id="aboutme-title1" class="section-title">about me</h2>
+        <h2 id="aboutme-title2" class="section-title">about me</h2>
+        <h2 id="aboutme-title3" class="section-title">about me</h2>
+      </div>
+    </section>
     <script src="index.js"></script>
   </body>
 </html>
