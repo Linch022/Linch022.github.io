@@ -11,14 +11,16 @@
     <img class="background-video" src="./img/background.svg" />
     <section id="homepage">
       <div id="auto-text-container">
-        <span>bonjour, je suis</span>
+        <span class="text">bonjour, je suis</span>
         <h3 id="auto-text"></h3>
       </div>
-      <div class="link-container">
-        <a href="projet.html"> projet </a><br />
-        <a href="cv.html"> cv </a><br />
-        contact
-      </div>
+      <nav id="navlink-container">
+        <a href="" class="navlink" id="nav-top">top</a>
+        <a href="" class="navlink">projet</a>
+        <a href="" class="navlink">skills</a>
+        <a href="" class="navlink">about me</a>
+        <a href="" class="navlink">contact me</a>
+      </nav>
     </section>
     <div class="space"></div>
     <section id="projet-section">
@@ -34,11 +36,13 @@
               id="play-button1"
               alt="bouton play"
             />
-            <h4 class="projet-title">projet 1</h4></a
-          >
-          <p class="projet-text">
-            Mon premier projet fait dans le cadre de ma formation Developpeur
-            web en solo
+          </a>
+          <h4 class="projet-title">projet 1</h4>
+          <h5>Les Petits Fripons</h5>
+          <p class="text">
+            Projet dans le cadre de la formation Wild Code School <br />
+            Objectif : Créer un site Web en HTML ET CSS <br />
+            Sujet choisi : Site web d'un refuge pour chat
           </p>
         </div>
         <div class="projet-container">
@@ -49,7 +53,7 @@
             alt="bouton play"
           />
           <h4 class="projet-title">projet 2</h4>
-          <p class="projet-text">
+          <p class="text">
             en cours... <br />
             projet en équipe
           </p>
@@ -73,11 +77,11 @@
           <img src="./img/expressjs.svg" alt="expressjs" class="skills-icons" />
         </div>
         <div id="s-container-column3">
-        <img src="./img/html-logo.svg" alt="html" class="skills-icons" />
-        <img src="./img/css-logo.svg" alt="css" class="skills-icons" />
+          <img src="./img/html-logo.svg" alt="html" class="skills-icons" />
+          <img src="./img/css-logo.svg" alt="css" class="skills-icons" />
         </div>
       </div>
-      </section>
+    </section>
     <div class="space"></div>
     <section id="aboutme-section">
       <div class="title-container">
@@ -86,7 +90,7 @@
         <h2 id="aboutme-title3" class="section-title">about me</h2>
       </div>
       <div id="presentation-container">
-        <p class="text-pres">
+        <p class="text">
           Passionné par l'informatique et les nouvelles techs, j'ai entrepris de
           me reconvertir en tant que développeur après 10 ans dans la
           restauration dont 5 ans au poste de manager.
@@ -96,37 +100,29 @@
         <div id="workexperience-container">
           <h3 class="aboutme-subtitles">my last work experiences</h3>
           <div class="experience-one">
-            <div class="text-aboutme">
-              <p>
-                <div class="little-text-aboutme"> 2017-2021 </div> <br />
-                manager <br />
-                kaffee berlin
-              </p>
-            </div>
+            <p class="text">
+              2017-2021 <br />
+              manager <br />
+              kaffee berlin
+            </p>
           </div>
           <div class="experience-two">
-            <div class="text-aboutme">
-              <p>
-                <div class="little-text-aboutme"> 2016-2017 </div> <br />
-                assistant manager <br />
-                crock'n'roll
-              </p>
-            </div>
+            <p class="text">
+              2016-2017 <br />
+              assistant manager <br />
+              crock'n'roll
+            </p>
           </div>
         </div>
         <div id="school-container">
           <h3 class="aboutme-subtitles">my school</h3>
-          <div class="text-aboutme">
-            <p>
-              <div class="little-text-aboutme"> 2022-2023 </div> <br />
-              wild code school <br />
-              <div class="little-text-aboutme">
-                Formation développeur <br />
-                Web et Mobile <br />
-                Full Stack JavaScript</
-              >
-            </p>
-          </div>
+          <p class="text">
+            2022-2023 <br />
+            wild code school <br />
+            Formation développeur <br />
+            Web et Mobile <br />
+            Full Stack JavaScript
+          </p>
         </div>
       </section>
     </section>

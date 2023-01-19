@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: normal;
 }
 body {
     font-family: var(--main-font);
@@ -47,48 +48,36 @@ a {
     height: 30vh;
 }
 
-.navbar {
-    font-size: 2rem;
+.text {
+    text-align: center;
+    font-family: var(--second-font);
+    font-weight: bolder;
+    line-height: 20px;
+}
+
+#navlink-container {
     display: flex;
-    margin-left: 10px;
-    width: 20%;
-    border: solid 4px rgba(0, 0, 0, 0);
-    border-top: none;
-    transition: 0.5s;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.4rem;
+    width: 100%;
+    height: 70px;
     z-index: 100;
+    background: linear-gradient(transparent, rgba(128, 128, 128, 0.4), rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.8), rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.4), transparent);;
 }
 
-.navbar-visible {
-    border: solid 4px #bed9ff;
-    border-top: none;
-    border-radius: 5px;
-    box-shadow: 7px 0px 20px 8px var(--textshadow-color);
-    background: var(--background-color);
+.navlink {
+    transition: all 0.3s ease-in-out;
+}
+.navlink:hover {
+    transform: scale(120%);
 }
 
-.logo-navbar {
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
+#nav-top {
+    opacity: 0;
 }
-
-.navmenu-container {
-    margin-top: 10px;
-}
-
-.navlist {
-    font-size: 1.5rem;
-    visibility: hidden;
-}
-
-.navlist-visible {
-    visibility: visible;
-}
-
-.menu {
-    cursor: pointer;
-}
-
 
 /* ----------------------------------HOMEPAGE ----------------------------------------------------------- */
 #homepage {
@@ -107,25 +96,15 @@ a {
     position: absolute;
     top: 20%;
     left: 33%;
-    font-family: var(--second-font);
-    font-weight: bolder;
 }
 
 #auto-text {
     font-size: 1.6rem;
     letter-spacing: 1px;
     line-height: 40px;
-    font-weight: normal;
     font-family: var(--main-font);
 }
 
-.link-container {
-    position: absolute;
-    bottom: 0;
-    font-size: 2rem;
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
 
 /* -----------------------------------------PROJET PAGE -------------------------------------------------- */
 #projet-section {
@@ -171,22 +150,11 @@ a {
 
 .play-button {
     width: 190px;
+    /* transition: all 0.3s ease-in-out; */
 }
 
 .projet-title {
-    font-weight: normal;
     font-size: 1.7rem;
-}
-
-.projet-text {
-    text-align: center;
-    font-family: var(--second-font);
-    font-weight: bolder;
-    line-height: 20px;
-}
-
-/* #body-project {
-    background: var(--background-color);
 }
 
 /* -----------------------------SKILLS SECTION --------------------------------------*/
@@ -299,19 +267,11 @@ a {
     margin-top: -70px;
 }
 
-.text-pres {
-    text-align: center;
-    line-height: 20px;
-    font-family: var(--second-font);
-    font-weight: bolder;
-}
-
 #aboutme-contenu {
     display: flex;
 }
 
 .aboutme-subtitles {
-    font-weight: normal;
     font-size: 1rem;
 }
 
@@ -320,17 +280,6 @@ a {
     text-align: center;
     flex-direction: column;
     width: 25%;
-}
-
-.text-aboutme {
-    line-height: 20px;
-    font-size: 0.9rem;
-}
-
-.little-text-aboutme {
-    font-family: var(--second-font);
-    font-weight: bolder;
-    margin: 10px 0;
 }
 
 #school-container {

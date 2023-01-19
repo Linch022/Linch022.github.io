@@ -62,53 +62,53 @@ window.addEventListener("load", function() {
 
 
 //  function for navbar
-const logoNavbar = document.querySelectorAll(".open-navbar");
-const navBar = document.querySelector(".navbar");
-const navList = document.querySelector(".navlist");
+// const logoNavbar = document.querySelectorAll(".open-navbar");
+// const navBar = document.querySelector(".navbar");
+// const navList = document.querySelector(".navlist");
 
-logoNavbar.forEach(function(logo){
-        logo.addEventListener("click", function(){
-            navBar.classList.toggle("navbar-visible")
-            navList.classList.toggle("navlist-visible")
-        })
-    })
+// logoNavbar.forEach(function(logo){
+//         logo.addEventListener("click", function(){
+//             navBar.classList.toggle("navbar-visible")
+//             navList.classList.toggle("navlist-visible")
+//         })
+//     })
 
 
     // function for progressbar 
 
-    let myLevel = document.querySelectorAll(".mylevel");
+    // let myLevel = document.querySelectorAll(".mylevel");
 
 
-function progress(idLevel, levelMax) {
-    let i = 0;
-    if (i === 0) {
-        i = 1;
-        const bar = document.getElementById(idLevel);
-        let width = 1;
-        let id = setInterval(frame, 30);
-        function frame() {
-            if (width >= levelMax) {
-                clearInterval(id)
-                i = 0;
-            } else {
-                width++;
-                bar.style.width = width + "%";
-                bar.innerHTML = width + "%";
-            }
-        }
-    }
-}
+// function progress(idLevel, levelMax) {
+//     let i = 0;
+//     if (i === 0) {
+//         i = 1;
+//         const bar = document.getElementById(idLevel);
+//         let width = 1;
+//         let id = setInterval(frame, 30);
+//         function frame() {
+//             if (width >= levelMax) {
+//                 clearInterval(id)
+//                 i = 0;
+//             } else {
+//                 width++;
+//                 bar.style.width = width + "%";
+//                 bar.innerHTML = width + "%";
+//             }
+//         }
+//     }
+// }
 
-function getId(selector) {
-    let elements = document.querySelectorAll(selector);
-    let ids = [];
-    elements.forEach(function(element) {
-        ids.push(element.id);
-    });
-    return ids;
-}
+// function getId(selector) {
+//     let elements = document.querySelectorAll(selector);
+//     let ids = [];
+//     elements.forEach(function(element) {
+//         ids.push(element.id);
+//     });
+//     return ids;
+// }
 
-let eventPlayed = false;
+// 
 
 // window.addEventListener("scroll", () => {
 
@@ -129,6 +129,8 @@ let eventPlayed = false;
 //     }
 
 // })
+
+let eventPlayed = false;
 
 window.addEventListener("scroll", () => {
     const columnTwo = document.getElementById("s-container-column2");
@@ -154,5 +156,23 @@ window.addEventListener("scroll", () => {
             element.style.opacity = "0";
             element.style.transform = "translateX(-400px)";
         })
+    }
+})
+
+// NAVBAR FUNCTION
+
+window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navlink-container");
+    const navbarTop = document.getElementById("nav-top");
+    let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+    console.log(scrollValue);
+    if (scrollValue > 0.387) {
+        navbarTop.style.opacity = "1";
+        navbar.style.position ="fixed";
+        navbar.style.top = "0";
+    } else if (scrollValue < 0.386) {
+        navbarTop.style.opacity = "0";
+        navbar.style.position ="absolute";
+        navbar.style.top = "";
     }
 })
