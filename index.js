@@ -110,22 +110,49 @@ function getId(selector) {
 
 let eventPlayed = false;
 
-window.addEventListener("scroll", () => {
+// window.addEventListener("scroll", () => {
 
+//     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+//     console.log(scrollValue);
+//     if (scrollValue > 0.60 && eventPlayed === false) {
+//         let ids = getId(".mylevel");
+//         let levelsValues = ["80", "80", "20", "0", "10", "75"];
+//         for (let i = 0; i < ids.length; i++) {
+//         progress(ids[i], levelsValues[i]);
+//         } eventPlayed = true;
+//     } else if (scrollValue < 0.54) {
+//         eventPlayed = false;
+//         for (let i = 0 ; i < myLevel.length; i++) {
+//             myLevel[i].style.width = "0%";
+//             myLevel[i].innerHTML = "";
+//         }
+//     }
+
+// })
+
+window.addEventListener("scroll", () => {
+    const columnTwo = document.getElementById("s-container-column2");
+    const columnOne = document.getElementById("s-container-column1");
+    const columnThree = document.getElementById("s-container-column3");
+    let columns = [columnThree, columnTwo, columnOne];
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    console.log(scrollValue);
+    
     if (scrollValue > 0.60 && eventPlayed === false) {
-        let ids = getId(".mylevel");
-        let levelsValues = ["80", "80", "20", "0", "10", "75"];
-        for (let i = 0; i < ids.length; i++) {
-        progress(ids[i], levelsValues[i]);
-        } eventPlayed = true;
+        let delay = 0;
+        columns.forEach(element => {
+            setTimeout(() => {
+                element.style.transition = "all 2s ease-out";
+                element.style.opacity = "1";
+                element.style.transform = "none";
+            }, delay);
+            delay += 1000;
+        });
     } else if (scrollValue < 0.54) {
         eventPlayed = false;
-        for (let i = 0 ; i < myLevel.length; i++) {
-            myLevel[i].style.width = "0%";
-            myLevel[i].innerHTML = "";
-        }
+        columns.forEach(element => {
+            element.style.transition = "";
+            element.style.opacity = "0";
+            element.style.transform = "translateX(-400px)";
+        })
     }
-
 })
