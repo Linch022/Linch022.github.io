@@ -139,7 +139,7 @@ window.addEventListener("scroll", () => {
     let columns = [columnThree, columnTwo, columnOne];
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
     
-    if (scrollValue > 0.58 && scrollValue < 0.71 && eventPlayed === false) {
+    if (scrollValue > 0.55 && scrollValue < 0.75 && eventPlayed === false) {
         let delay = 0;
         columns.forEach(element => {
             setTimeout(() => {
@@ -149,7 +149,7 @@ window.addEventListener("scroll", () => {
             }, delay);
             delay += 1000;
         });
-    } else if (scrollValue < 0.51 || scrollValue > 0.77) {
+    } else if (scrollValue < 0.52 || scrollValue > 0.79) {
         eventPlayed = false;
         columns.forEach(element => {
             element.style.transition = "";
@@ -167,7 +167,7 @@ window.addEventListener("scroll", () => {
     const navbarBack = document.getElementById("nav-background");
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
     console.log(scrollValue);
-    if (scrollValue > 0.332) {
+    if (scrollValue > 0.338) {
         navbarTop.style.opacity = "1";
         navbar.style.position ="fixed";
         navbar.style.top = "0";
@@ -175,7 +175,7 @@ window.addEventListener("scroll", () => {
         navbarBack.style.top = "5.2%";
 
 
-    } else if (scrollValue < 0.34) {
+    } else if (scrollValue < 0.35) {
         navbarTop.style.opacity = "0";
         navbar.style.position ="absolute";
         navbar.style.top = "";

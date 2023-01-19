@@ -44,9 +44,9 @@ a {
     0px 0px 60px var(--textshadow-color);
 }
 
-/* .space {
+.space {
     height: 30vh;
-} */
+}
 
 .text {
     text-align: center;
@@ -171,7 +171,6 @@ a {
     height: 100vh;
     background: linear-gradient(transparent, rgba(128, 128, 128, 0.4), rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.7), rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.4), transparent);
     position: relative;
-    display: none;
 }
 
 #skills-title1 {
@@ -248,7 +247,6 @@ a {
     height: 100vh;
     background: linear-gradient(transparent, rgba(128, 128, 128, 0.4), rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.7), rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.4), transparent);
     position: relative;
-    display: none;
 }
 
 #aboutme-title1 {
