@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PORTFOLIO | NICOLAS BERTHOLLET</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <img class="background-video" src="./img/background.svg" />
     <section id="homepage">
       <div id="auto-text-container">
-        <span>bonjour, je suis</span>
+        <span class="text">bonjour, je suis</span>
         <h3 id="auto-text"></h3>
       </div>
-      <div class="link-container">
-        <a href="projet.html"> projet </a><br />
-        <a href="cv.html"> cv </a><br />
-        contact
-      </div>
-      <div class="pres-container">
-        <h3 id="pres-title">PRESENTATION</h3>
-        <p class="text-pres">
-          Passionné par l'informatique et les nouvelles techs, j'ai entrepris de
-          me reconvertir en tant que développeur après 10 ans dans la
-          restauration dont 5 ans au poste de manager.
-        </p>
-      </div>
+      <div id="nav-background"></div>
+      <nav id="navlink-container">
+        <a href="#" class="navlink" id="nav-top">top</a>
+        <a href="#projet-section" class="navlink">projet</a>
+        <a href="#skills-section" class="navlink">skills</a>
+        <a href="#aboutme-section" class="navlink">about me</a>
+        <a href="#contact-section" class="navlink">contact</a>
+      </nav>
     </section>
     <div class="space"></div>
     <section id="projet-section">
@@ -42,11 +44,13 @@
               id="play-button1"
               alt="bouton play"
             />
-            <h4 class="projet-title">projet 1</h4></a
-          >
-          <p class="projet-text">
-            Mon premier projet fait dans le cadre de ma formation Developpeur
-            web en solo
+          </a>
+          <h4 class="projet-title">projet 1</h4>
+          <h5>Les Petits Fripons</h5>
+          <p class="text">
+            Projet dans le cadre de la formation Wild Code School <br />
+            Objectif : Créer un site Web en HTML ET CSS <br />
+            Sujet choisi : Site web d'un refuge pour chat
           </p>
         </div>
         <div class="projet-container">
@@ -57,7 +61,7 @@
             alt="bouton play"
           />
           <h4 class="projet-title">projet 2</h4>
-          <p class="projet-text">
+          <p class="text">
             en cours... <br />
             projet en équipe
           </p>
@@ -72,35 +76,17 @@
         <h2 id="skills-title3" class="section-title">skills</h2>
       </div>
       <div id="skills-container">
-        <div id="s-container-row1">
-          <img src="./img/html-logo.svg" alt="html" class="skills-icons" />
-          <div class="progressbar-container">
-            <div class="mylevel" id="html-level"></div>
-          </div>
-          <img src="./img/css-logo.svg" alt="css" class="skills-icons" />
-          <div class="progressbar-container">
-            <div class="mylevel" id="css-level"></div>
-          </div>
-        </div>
-        <div id="s-container-row2">
+        <div id="s-container-column1">
           <img src="./img/js-logo.svg" alt="js" class="skills-icons" />
-          <div class="progressbar-container">
-            <div class="mylevel" id="js-level"></div>
-          </div>
           <img src="./img/react-logo.svg" alt="react" class="skills-icons" />
-          <div class="progressbar-container">
-            <div class="mylevel" id="react-level"></div>
-          </div>
         </div>
-        <div id="s-container-row3">
+        <div id="s-container-column2">
           <img src="./img/nodejs-logo.svg" alt="nodejs" class="skills-icons" />
-          <div class="progressbar-container">
-            <div class="mylevel" id="nodejs-level"></div>
-          </div>
-          <img src="./img/canvalogo.svg" alt="canva" class="skills-icons" />
-          <div class="progressbar-container">
-            <div class="mylevel" id="canva-level"></div>
-          </div>
+          <img src="./img/expressjs.svg" alt="expressjs" class="skills-icons" />
+        </div>
+        <div id="s-container-column3">
+          <img src="./img/html-logo.svg" alt="html" class="skills-icons" />
+          <img src="./img/css-logo.svg" alt="css" class="skills-icons" />
         </div>
       </div>
     </section>
@@ -112,16 +98,44 @@
         <h2 id="aboutme-title3" class="section-title">about me</h2>
       </div>
       <div id="presentation-container">
-        <p class="text-pres">
-          Passionné par l'informatique et les nouvelles techs, j'ai entrepris de
-          me reconvertir en tant que développeur après 10 ans dans la
-          restauration dont 5 ans au poste de manager.
+        <p class="text">
+          Après une expérience réussie en restauration, je reviens vers mes
+          premiers amours : l'informatique et les nouvelles technologies. Plus
+          précisement le métier de développeur web.
         </p>
-      </div>
-      <div id="workexperience-container">
-        <h3>my last work experiences</h3>
+        <p class="text">
+          je suis à la recherche d'un stage de 4 mois du 3 Juillet 2023 au 7
+          novembre 2023 pour compléter mon cursus et mettre mes nouvelles
+          compétences en action
+        </p>
+        <p class="text">
+          je serais également disponible à l'embauche après la fin de ma
+          formation à la Wild Code School le 13 novembre 2023
+        </p>
+        <p class="text">si vous le souhaitez voici <br /></p>
+        <div class="cv">
+          <a href="" class="cv"> mon cv </a>
+        </div>
       </div>
     </section>
+    <div class="space"></div>
+    <footer id="contact-section">
+      <div class="title-container">
+        <h2 id="contact-title1" class="section-title">contact</h2>
+        <h2 id="contact-title2" class="section-title">contact</h2>
+        <h2 id="contact-title3" class="section-title">contact</h2>
+      </div>
+      <div id="contact-container">
+        <a href="https://github.com/Linch022" class="contact">linkedin</a>
+        <a href="https://www.linkedin.com/in/nicolasberthollet/" class="contact"
+          >github</a
+        >
+        <p>berthollet.nicolas@gmail.com</p>
+      </div>
+      <div id="mentions">
+        <p><i class="fa-regular fa-copyright"></i> nicolas berthollet - 2023</p>
+      </div>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
