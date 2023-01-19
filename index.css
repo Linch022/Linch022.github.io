@@ -127,30 +127,6 @@ a {
     margin-bottom: 10px;
 }
 
-.pres-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 250px;
-    line-height: 40px; 
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-
-#pres-title {
-    font-weight: normal;
-    text-align: center;
-    font-size: 1.6rem;
-
-}
-
-.text-pres {
-    text-align: center;
-    line-height: 35px;
-    font-family: var(--second-font);
-    font-weight: bolder;
-}
-
 /* -----------------------------------------PROJET PAGE -------------------------------------------------- */
 #projet-section {
     height: 100vh;
@@ -247,40 +223,30 @@ a {
     display: grid;
     height: 45vh;
     width: 70vw;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     margin: -30px auto 0 auto;
 }
 
 #s-container-row1 {
     display: grid;
-    grid-template-columns: 15% 30% 15% 30%;
+    grid-template-columns: 50% 50%;
 }
 
 #s-container-row2 {
     display: grid;
-    grid-template-columns: 15% 30% 15% 30%;
+    grid-template-columns: 50% 50%;
 }
 
 #s-container-row3 {
     display: grid;
-    grid-template-columns: 15% 30% 15% 30%;
+    grid-template-columns: 50% 50%;
 }
 
 .skills-icons {
     width: 50px;
     margin: auto;
-}
-
-.progressbar-container {
-    display: flex;
-}
-
-.mylevel {
-    margin: auto 0;
-    background-color: var(--textshadow-color);
-    height: 30px;
-    border: solid 2px #bed9ff;
-    box-shadow: 0px 0px 20px 5px var(--textshadow-color);
+    /* opacity: 0; */
+    /* transform: translateX(-1500%); */
 }
 
 
@@ -313,6 +279,51 @@ a {
     transform: translateX(-50%);
     z-index: -2;
     color: var(--title-effect2);
+}
+
+#presentation-container {
+    margin-top: -70px;
+}
+
+.text-pres {
+    text-align: center;
+    line-height: 20px;
+    font-family: var(--second-font);
+    font-weight: bolder;
+}
+
+#aboutme-contenu {
+    display: flex;
+}
+
+.aboutme-subtitles {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+#workexperience-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 25%;
+}
+
+.text-aboutme {
+    line-height: 20px;
+    font-size: 0.9rem;
+}
+
+.little-text-aboutme {
+    font-family: var(--second-font);
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+#school-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 25%;
 }
 
 
