@@ -61,74 +61,8 @@ window.addEventListener("load", function() {
 });
 
 
-//  function for navbar
-// const logoNavbar = document.querySelectorAll(".open-navbar");
-// const navBar = document.querySelector(".navbar");
-// const navList = document.querySelector(".navlist");
+// SKILLS FUNCTION
 
-// logoNavbar.forEach(function(logo){
-//         logo.addEventListener("click", function(){
-//             navBar.classList.toggle("navbar-visible")
-//             navList.classList.toggle("navlist-visible")
-//         })
-//     })
-
-
-    // function for progressbar 
-
-    // let myLevel = document.querySelectorAll(".mylevel");
-
-
-// function progress(idLevel, levelMax) {
-//     let i = 0;
-//     if (i === 0) {
-//         i = 1;
-//         const bar = document.getElementById(idLevel);
-//         let width = 1;
-//         let id = setInterval(frame, 30);
-//         function frame() {
-//             if (width >= levelMax) {
-//                 clearInterval(id)
-//                 i = 0;
-//             } else {
-//                 width++;
-//                 bar.style.width = width + "%";
-//                 bar.innerHTML = width + "%";
-//             }
-//         }
-//     }
-// }
-
-// function getId(selector) {
-//     let elements = document.querySelectorAll(selector);
-//     let ids = [];
-//     elements.forEach(function(element) {
-//         ids.push(element.id);
-//     });
-//     return ids;
-// }
-
-// 
-
-// window.addEventListener("scroll", () => {
-
-//     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-//     console.log(scrollValue);
-//     if (scrollValue > 0.60 && eventPlayed === false) {
-//         let ids = getId(".mylevel");
-//         let levelsValues = ["80", "80", "20", "0", "10", "75"];
-//         for (let i = 0; i < ids.length; i++) {
-//         progress(ids[i], levelsValues[i]);
-//         } eventPlayed = true;
-//     } else if (scrollValue < 0.54) {
-//         eventPlayed = false;
-//         for (let i = 0 ; i < myLevel.length; i++) {
-//             myLevel[i].style.width = "0%";
-//             myLevel[i].innerHTML = "";
-//         }
-//     }
-
-// })
 
 let eventPlayed = false;
 
@@ -155,31 +89,46 @@ window.addEventListener("scroll", () => {
             element.style.transition = "";
             element.style.opacity = "0";
             element.style.transform = "translateX(-400px)";
-        })
-    }
-})
+        });
+    };
+});
 
 // NAVBAR FUNCTION
 
-window.addEventListener("scroll", () => {
-    const navbar = document.getElementById("navlink-container");
-    const navbarTop = document.getElementById("nav-top");
-    const navbarBack = document.getElementById("nav-background");
-    let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    console.log(scrollValue);
-    if (scrollValue > 0.332) {
-        navbarTop.style.opacity = "1";
-        navbar.style.position ="fixed";
-        navbar.style.top = "0";
-        navbarBack.style.position = "fixed";
-        navbarBack.style.top = "5.2%";
+// window.addEventListener("scroll", () => {
+//     const navbar = document.getElementById("navlink-container");
+//     const navbarTop = document.getElementById("nav-top");
+//     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+//     console.log(scrollValue);
+//     if (scrollValue > 0.332) {
+//         navbarTop.style.opacity = "1";
+//         // navbar.style.position ="fixed";
+//         // navbar.style.top = "0";
+//         // navbar.classList.add("navbar-scroll")
 
 
-    } else if (scrollValue < 0.34) {
-        navbarTop.style.opacity = "0";
-        navbar.style.position ="absolute";
-        navbar.style.top = "";
-        navbarBack.style.position ="absolute";
-        navbarBack.style.top = "";
+//     } else if (scrollValue < 0.34) {
+//         navbarTop.style.opacity = "0";
+//         // navbar.style.position ="fixed";
+//         // navbar.style.top = "";
+//         // navbarBack.style.position ="absolute";
+//         // navbarBack.style.top = "";
+//     }
+// })
+
+const navMenu = document.getElementById("nav-button");
+const navBar = document.getElementById("navbar");
+let navStatut = true;
+
+navMenu.addEventListener("click", () => {
+    console.log(navMenu)
+    if(navStatut === true) {
+        navBar.style.transform = "translateX(0px)";
+        navMenu.style.transform = "translateX(0px)";
+        navStatut = false;
+    } else {
+        navBar.style.transform = "translateX(-180px)";
+        navMenu.style.transform = "translateX(-120px)";
+        navStatut = true;
     }
-})
+});
