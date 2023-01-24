@@ -106,6 +106,22 @@ a {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 450px) {
+    
+    .space {
+        height: 20vh;
+    }
+    .text {
+        font-size: 0.8rem;
+    }
+    .section-title {
+        font-size: 4rem;
+    }
+    .navlink:hover {
+        transform: none;
+    }
+}
+
 /* ----------------------------------HOMEPAGE ----------------------------------------------------------- */
 #homepage {
     height: 100vh;
@@ -132,10 +148,20 @@ a {
     font-family: var(--main-font);
 }
 
+@media screen and (max-width: 450px) {
+    #auto-text-container {
+        top: 35%;
+        left: 25%;
+    }
+
+    #auto-text {
+        font-size: 1rem;
+    }
+}
 
 /* -----------------------------------------PROJET PAGE -------------------------------------------------- */
 #projet-section {
-    height: 100vh;
+    height: 120vh;
     position: relative;
     background: linear-gradient(transparent, rgba(128, 128, 128, 0.4), rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.7), rgba(128, 128, 128, 0.6), rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.4), transparent);
 }
@@ -162,8 +188,6 @@ a {
 
 .projet {
     display: flex;
-    position: absolute;
-    top: 35%;
     justify-content: space-around;
     width: 100%;
 }
@@ -178,11 +202,21 @@ a {
 .play-button {
     width: 140px;
     height: 140px;
-    /* transition: all 0.3s ease-in-out; */
 }
 
 .projet-title {
     font-size: 1.7rem;
+}
+
+@media screen and (max-width: 450px) {
+    .projet {
+        flex-direction: column;
+        margin-top: -80px;
+    }
+    .projet-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 /* -----------------------------SKILLS SECTION --------------------------------------*/
@@ -258,7 +292,20 @@ a {
     transform: scale(130%);
 
 }
-
+@media screen and (max-width: 450px) {
+    #skills-title1, #skills-title2, #skills-title3 {
+        font-size: 3.5rem;
+    }
+    #skills-container {
+        width: 90vw;
+    }
+    .skills-icons {
+        width: 60px;
+    }
+    .skills-icons:hover {
+        transform: none;
+    }
+}
 
 /* ------------------------ABOUT ME SECTION -------------------- */
 
@@ -313,7 +360,20 @@ transition: all 0.3s ease-in-out;
     transform: scale(130%);
  }
 
-
+ @media screen and (max-width: 450px) {
+    #aboutme-title1, #aboutme-title2, #aboutme-title3 {
+        font-size:2.3rem;
+    }
+    .presentation-container {
+        width: 90vw;
+    }
+    .cv {
+        margin-top: 40px;
+    }
+    .cv:hover {
+        transform: none;
+    }
+ }
  /*---------------------------CONTACT------------------------------*/
 
  #contact-section {
