@@ -106,19 +106,26 @@ a {
     justify-content: space-between;
 }
 
-@media screen and (max-width: 450px) {
-    
+@media screen and (max-width: 900px){
+    .navlink:hover {
+        transform: none;
+    }
+    #nav-container {
+        width: 170px;
+    }
+    #nav-button{
+        width: 40px;
+        height: 40px;
+    }
     .space {
         height: 20vh;
     }
+}
+
+@media screen and (max-width: 600px) {
+    
     .text {
         font-size: 0.8rem;
-    }
-    .section-title {
-        font-size: 4rem;
-    }
-    .navlink:hover {
-        transform: none;
     }
 }
 
@@ -148,7 +155,14 @@ a {
     font-family: var(--main-font);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 900px){
+    #auto-text-container {
+        top: 35%;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
     #auto-text-container {
         top: 35%;
         left: 25%;
@@ -208,14 +222,37 @@ a {
     font-size: 1.7rem;
 }
 
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 900px) {
+    #play-title1, #play-title2, #play-title3 {
+        font-size: 4rem;
+    }
+    #projet-section {
+        height: 100vh;
+    }
     .projet {
-        flex-direction: column;
-        margin-top: -80px;
+        margin: -60px 30px 0 30px;
     }
     .projet-container {
-        width: 100%;
+        width: 45%;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    #play-title1, #play-title2, #play-title3 {
+        font-size: 3.5rem;
+    }
+    #projet-section {
+        height: 140vh;
+    }
+    .projet {
+        margin: -80px auto 0 auto;
+        flex-direction: column;
+    }
+    .projet-container {
         margin-bottom: 30px;
+        width: 100%;
     }
 }
 
@@ -292,18 +329,25 @@ a {
     transform: scale(130%);
 
 }
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 900px) {
     #skills-title1, #skills-title2, #skills-title3 {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     #skills-container {
         width: 90vw;
     }
-    .skills-icons {
-        width: 60px;
-    }
     .skills-icons:hover {
         transform: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #skills-title1, #skills-title2, #skills-title3 {
+        font-size: 3.5rem;
+    }
+    .skills-icons {
+        width: 60px;
     }
 }
 
@@ -360,12 +404,13 @@ transition: all 0.3s ease-in-out;
     transform: scale(130%);
  }
 
- @media screen and (max-width: 450px) {
+ @media screen and (max-width: 900px){
+
     #aboutme-title1, #aboutme-title2, #aboutme-title3 {
-        font-size:2.3rem;
+        font-size: 3.3rem;
     }
-    .presentation-container {
-        width: 90vw;
+    #presentation-container {
+        width: 80vw;
     }
     .cv {
         margin-top: 40px;
@@ -373,6 +418,14 @@ transition: all 0.3s ease-in-out;
     .cv:hover {
         transform: none;
     }
+ }
+
+ @media screen and (max-width: 600px) {
+    #aboutme-title1, #aboutme-title2, #aboutme-title3 {
+        font-size:2.3rem;
+    }
+
+
  }
  /*---------------------------CONTACT------------------------------*/
 

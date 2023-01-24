@@ -72,7 +72,46 @@ window.addEventListener("scroll", () => {
     const columnThree = document.getElementById("s-container-column3");
     let columns = [columnThree, columnTwo, columnOne];
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    
+    console.log(scrollValue)
+    if (window.matchMedia("(max-width: 600px)").matches){
+        if (scrollValue > 0.64 && scrollValue < 0.80 && eventPlayed === false) {
+            let delay = 0;
+            columns.forEach(element => {
+                setTimeout(() => {
+                    element.style.transition = "all 2s ease-out";
+                    element.style.opacity = "1";
+                    element.style.transform = "none";
+                }, delay);
+                delay += 1000;
+            });
+        } else if (scrollValue < 0.52 || scrollValue > 0.88) {
+            eventPlayed = false;
+            columns.forEach(element => {
+                element.style.transition = "";
+                element.style.opacity = "0";
+                element.style.transform = "translateX(-400px)";
+            });
+        };
+    } else if (window.matchMedia("(max-width: 900px)").matches){
+    if (scrollValue > 0.6 && scrollValue < 0.74 && eventPlayed === false) {
+        let delay = 0;
+        columns.forEach(element => {
+            setTimeout(() => {
+                element.style.transition = "all 2s ease-out";
+                element.style.opacity = "1";
+                element.style.transform = "none";
+            }, delay);
+            delay += 1000;
+        });
+    } else if (scrollValue < 0.49 || scrollValue > 0.86) {
+        eventPlayed = false;
+        columns.forEach(element => {
+            element.style.transition = "";
+            element.style.opacity = "0";
+            element.style.transform = "translateX(-400px)";
+        });
+    };
+} else {
     if (scrollValue > 0.58 && scrollValue < 0.71 && eventPlayed === false) {
         let delay = 0;
         columns.forEach(element => {
@@ -91,30 +130,9 @@ window.addEventListener("scroll", () => {
             element.style.transform = "translateX(-400px)";
         });
     };
+}
 });
 
-// NAVBAR FUNCTION
-
-// window.addEventListener("scroll", () => {
-//     const navbar = document.getElementById("navlink-container");
-//     const navbarTop = document.getElementById("nav-top");
-//     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-//     console.log(scrollValue);
-//     if (scrollValue > 0.332) {
-//         navbarTop.style.opacity = "1";
-//         // navbar.style.position ="fixed";
-//         // navbar.style.top = "0";
-//         // navbar.classList.add("navbar-scroll")
-
-
-//     } else if (scrollValue < 0.34) {
-//         navbarTop.style.opacity = "0";
-//         // navbar.style.position ="fixed";
-//         // navbar.style.top = "";
-//         // navbarBack.style.position ="absolute";
-//         // navbarBack.style.top = "";
-//     }
-// })
 
 const navMenu = document.getElementById("nav-button");
 const navBar = document.getElementById("navbar");
