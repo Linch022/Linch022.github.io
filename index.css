@@ -377,7 +377,7 @@ a {
 #aboutme-title2 {
     font-size: 5rem;
     top: -0.7%;
-    left: 49.3vw;
+    left: 49.5vw;
     transform: translateX(-50%);
     z-index: -1;
     color: var(--title-effect1);
@@ -385,7 +385,7 @@ a {
 #aboutme-title3 {
     font-size: 5rem;
     top: -1.4%;
-    left: 48.8vw;
+    left: 49vw;
     transform: translateX(-50%);
     z-index: -2;
     color: var(--title-effect2);
@@ -459,7 +459,7 @@ transition: all 0.3s ease-in-out;
 #contact-title2 {
     font-size: 2.5rem;
     top: -0.7%;
-    left: 49.3vw;
+    left: 49.6vw;
     transform: translateX(-50%);
     z-index: -1;
     color: var(--title-effect1);
@@ -467,7 +467,7 @@ transition: all 0.3s ease-in-out;
 #contact-title3 {
     font-size: 2.5rem;
     top: -1.4%;
-    left: 48.8vw;
+    left: 49.2vw;
     transform: translateX(-50%);
     z-index: -2;
     color: var(--title-effect2);

@@ -122,7 +122,7 @@ window.addEventListener("scroll", () => {
             }, delay);
             delay += 1000;
         });
-    } else if (scrollValue < 0.51 || scrollValue > 0.77) {
+    } else if (scrollValue < 0.52 || scrollValue > 0.79) {
         eventPlayed = false;
         columns.forEach(element => {
             element.style.transition = "";
@@ -149,4 +149,4 @@ navMenu.addEventListener("click", () => {
         navMenu.style.transform = "translateX(-120px)";
         navStatut = true;
     }
-});
+})
