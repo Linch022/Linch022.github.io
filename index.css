@@ -439,11 +439,11 @@ transition: all 0.3s ease-in-out;
  /*---------------------------CONTACT------------------------------*/
 
  #contact-section {
-    height: 15vh;
+    height: 20vh;
     background: linear-gradient(transparent 5%,15%, rgba(128, 128, 128, 0.9) 80%);
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 #contact-container {
@@ -465,4 +465,11 @@ transition: all 0.3s ease-in-out;
 
 .contact:hover {
     transform: scale(120%);
+}
+
+@media screen and (max-width: 600px) {
+    #contact-section {
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
