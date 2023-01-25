@@ -37,8 +37,8 @@ a {
 .title-container {
     height: 250px;
 }
+
 .section-title {
-    font-size: 7rem;
     position: absolute;
     text-shadow: 0 0 20px var(--textshadow-color),
     0px 0px 60px var(--textshadow-color);
@@ -55,6 +55,19 @@ a {
     line-height: 20px;
 }
 
+#nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-size: 1.1rem;
+    width: 200px;
+    height: 100vh;
+    align-items: flex-start;
+    z-index: 100;
+
+}
 #navbar {
     flex-direction: column;
     height: 100%;
@@ -70,19 +83,6 @@ a {
     padding-bottom: 100%;
 } 
 
-#nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    font-size: 1.1rem;
-    width: 200px;
-    height: 100vh;
-    align-items: flex-start;
-    z-index: 100;
-
-}
 
 #nav-button {
     height: 80px;
@@ -134,7 +134,7 @@ a {
     height: 100vh;
 }
 
-.background-video {
+.background {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
@@ -184,6 +184,7 @@ a {
     top: 0;
     left: 50vw;
     transform: translateX(-50%);
+    font-size: 7rem;
 }
 #play-title2 {
     top: -0.7%;
@@ -191,6 +192,7 @@ a {
     transform: translateX(-50%);
     z-index: -1;
     color: var(--title-effect1);
+    font-size: 7rem;
 }
 #play-title3 {
     top: -1.4%;
@@ -198,6 +200,7 @@ a {
     transform: translateX(-50%);
     z-index: -2;
     color: var(--title-effect2);
+    font-size: 7rem;
 }
 
 .projet {
@@ -441,39 +444,13 @@ transition: all 0.3s ease-in-out;
  #contact-section {
     height: 15vh;
     background: linear-gradient(transparent 5%,15%, rgba(128, 128, 128, 0.9) 80%);
-    position: relative;
     display: flex;
     flex-direction: column;
-}
-
-#contact-section .title-container {
-    height: 100px;
-}
-
-#contact-title1 {
-    font-size: 2.5rem;
-    top: 0;
-    left: 50vw;
-    transform: translateX(-50%);
-}
-#contact-title2 {
-    font-size: 2.5rem;
-    top: -0.7%;
-    left: 49.6vw;
-    transform: translateX(-50%);
-    z-index: -1;
-    color: var(--title-effect1);
-}
-#contact-title3 {
-    font-size: 2.5rem;
-    top: -1.4%;
-    left: 49.2vw;
-    transform: translateX(-50%);
-    z-index: -2;
-    color: var(--title-effect2);
+    align-items: flex-end;;
 }
 
 #contact-container {
+    width: 50%;
     display: flex;
     justify-content: space-around;
     margin: auto 0;
@@ -481,21 +458,14 @@ transition: all 0.3s ease-in-out;
 
 #mentions {
     text-align: center;
+    width: 100%;
 }
 
 .contact {
     transition: all 0.3s ease-in-out;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 .contact:hover {
     transform: scale(120%);
-}
-
-#contact-container p {
-    transition: all 0.3s ease-in-out;
-}
-
-#contact-container p:hover {
-    transform: scale(108%);
 }
