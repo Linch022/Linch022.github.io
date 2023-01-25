@@ -241,8 +241,17 @@ a {
 
 @media screen and (max-width: 600px) {
     #play-title1, #play-title2, #play-title3 {
-        font-size: 3.5rem;
+        font-size: 2.3rem;
     }
+    #play-title2 {
+        top: -0.5%;
+        left: 49.5vw;
+    }
+    #play-title3 {
+        top: -1%;
+        left: 49vw;
+    }
+
     #projet-section {
         height: 140vh;
     }
@@ -344,7 +353,7 @@ a {
 
 @media screen and (max-width: 600px) {
     #skills-title1, #skills-title2, #skills-title3 {
-        font-size: 3.5rem;
+        font-size: 2.3rem;
     }
     .skills-icons {
         width: 60px;
@@ -407,7 +416,7 @@ transition: all 0.3s ease-in-out;
  @media screen and (max-width: 900px){
 
     #aboutme-title1, #aboutme-title2, #aboutme-title3 {
-        font-size: 3.3rem;
+        font-size: 3rem;
     }
     #presentation-container {
         width: 80vw;
@@ -422,7 +431,7 @@ transition: all 0.3s ease-in-out;
 
  @media screen and (max-width: 600px) {
     #aboutme-title1, #aboutme-title2, #aboutme-title3 {
-        font-size:2.3rem;
+        font-size:2rem;
     }
 
 

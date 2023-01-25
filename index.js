@@ -28,7 +28,7 @@ function createLetter(elementId, text, delay, duration) {
 
   
 
-createLetter("auto-text", "NICOLAS BERTHOLLET\nDEVELOPPEUR WEB\nFULLSTACK Javascript", 100, 2000);
+createLetter("auto-text", "NICOLAS BERTHOLLET\nDEVELOPPEUR WEB\nJavascript", 100, 2000);
 
 // function for play section 
 
