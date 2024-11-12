@@ -1,0 +1,193 @@
+.headline {
+  margin: $large-spacing 0;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 380px;
+
+    @include device(tablet) {
+      max-width: 760px;
+    }
+
+    @include device(laptop) {
+      max-width: 1024px;
+    }
+
+    &--button {
+      width: 218px;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: $small-spacing;
+
+    @include device(laptop) {
+      font-size: $xx-large-font;
+    }
+  }
+
+  &__content-text {
+    font-size: $medium-font;
+    margin-bottom: $medium-spacing;
+  }
+
+  &__content-button {
+    width: 218px;
+  }
+}
+
+.steps-section {
+  background-color: $white;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  padding: $x-large-spacing 0;
+  gap: $small-spacing;
+  margin: 0 auto;
+  max-width: 380px;
+
+  @include device(tablet) {
+    max-width: 80vw;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $medium-spacing;
+
+    @include device(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $medium-spacing;
+    background-color: $light-grey;
+    height: 72px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 0px #00000026;
+    padding-left: $large-spacing;
+
+    @include device(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__item-number {
+    position: absolute;
+    top: 28px;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    border-radius: 100%;
+    font-size: $small-font;
+  }
+
+  &__item-icon {
+    color: #7e7e7e;
+    font-size: $large-font;
+
+    &--active {
+      color: $primary-color;
+    }
+  }
+
+  &__item-text {
+    font-weight: 500;
+  }
+}
+
+.restaurants {
+  padding: $x-large-spacing 0;
+  margin: 0 auto;
+  max-width: 380px;
+
+  .section__title {
+    margin-bottom: $medium-spacing;
+  }
+
+  @include device(tablet) {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: $large-spacing;
+
+  @include device(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: 15px;
+  background-color: $white;
+  box-shadow: 0px 4px 15px 0px #0000001a;
+
+  @include device(tablet) {
+    width: 45%;
+  }
+
+  &__image {
+    object-fit: cover;
+    height: 170px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  &__content {
+    padding: $small-spacing;
+    padding-right: $x-small-spacing;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text-title {
+    font-size: $medium-font;
+  }
+
+  &__text-description {
+    font-size: 1.063rem;
+    // Pertinence de mettre ce chiffre ? 1 serais ok ?
+    font-weight: 300;
+  }
+}
+
+.new-label {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 20px;
+  height: 29px;
+  width: 80px;
+  border-radius: 2px;
+  background-color: $third-color;
+  color: $third-color-font;
+  font-size: $small-font;
+  font-weight: 500;
+  box-shadow: 0px 2px 4px 0px #00000026;
+}

@@ -1,0 +1,54 @@
+@mixin like-style {
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes liked {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes unliked {
+  to {
+    opacity: 0;
+  }
+}
+
+.like-button {
+  &--restaurant {
+    position: relative;
+    padding-right: $large-spacing;
+  }
+
+  &--card {
+    position: absolute;
+    right: $large-spacing;
+    bottom: $medium-spacing;
+  }
+}
+
+.unlike {
+  @include like-style;
+}
+
+.liked {
+  @include like-style;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: bottom;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.checkbox-like:checked ~ .liked {
+  animation: liked 0.5s forwards;
+}
+
+.checkbox-like:checked ~ .unlike {
+  animation: unliked 0.7s forwards;
+}

@@ -1,0 +1,124 @@
+@keyframes hide-loader {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.loader-container {
+  background: $light-grey;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  animation: hide-loader 1s 3s forwards;
+
+  &__logo {
+    z-index: 2;
+    background: $light-grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: $small-circle;
+    width: $small-circle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    @include device(tablet) {
+      height: $large-circle;
+      width: $large-circle;
+    }
+
+    &::before {
+      @include loader-ball-style(false);
+    }
+
+    &::after {
+      @include loader-ball-style(true);
+      & {
+        transform: translateX(calc($small-circle / 2 - $small-ball - 5px))
+          rotate(360deg);
+      }
+      @include device(tablet) {
+        transform: translateX(calc($large-circle / 2 - $large-ball - 5px))
+          rotate(360deg);
+      }
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc($small-circle + 30px);
+    width: calc($small-circle + 30px);
+    border-radius: 50%;
+    background: $grey;
+    opacity: 70%;
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.7098039216);
+
+    @include device(tablet) {
+      height: calc($large-circle + 45px);
+      width: calc($large-circle + 45px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -150%);
+      height: calc($small-circle + 30px);
+      width: calc($small-circle + 30px);
+      background: $purple-gradient;
+      @include circle-filling();
+
+      @include device(tablet) {
+        height: calc($large-circle + 45px);
+        width: calc($large-circle + 45px);
+      }
+    }
+  }
+}
+
+.logo-loader {
+  @keyframes show-logo {
+    to {
+      transform: translate(-50%, -50%) scaleX(0);
+    }
+  }
+
+  svg {
+    width: calc($small-circle - 80px);
+
+    @include device(tablet) {
+      width: calc($large-circle - 80px);
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(1);
+    height: 40px;
+    width: calc($small-circle - 80px);
+    background: $light-grey;
+    box-shadow: inset -9px 0px 8px 0px #f6f6f6;
+    transform-origin: right;
+    animation: show-logo 0.4s 0.3s forwards;
+    @include device(tablet) {
+      height: 60px;
+      width: calc($large-circle - 80px);
+    }
+  }
+}

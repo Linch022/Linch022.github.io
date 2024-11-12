@@ -1,0 +1,52 @@
+.footer {
+  background-color: $grey;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: $x-small-spacing;
+  gap: $small-spacing;
+
+  @include device(tablet) {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+
+  &__title {
+    font-family: $font-title;
+    font-size: $medium-font;
+    font-style: italic;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: $smaller-spacing;
+
+    @include device(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__links-item {
+    &:nth-child(-n + 2) {
+      font-weight: 500;
+    }
+
+    @include device(tablet) {
+      &:nth-child(even) {
+        margin-right: $large-spacing;
+      }
+
+      &:nth-child(odd) {
+        margin-right: $smaller-spacing;
+      }
+    }
+  }
+
+  &__links-icon {
+    width: 17px;
+    margin-right: $smaller-spacing;
+    font-size: $small-font;
+  }
+}

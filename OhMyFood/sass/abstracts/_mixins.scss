@@ -1,0 +1,182 @@
+//***************** MIXINS GENERALES ***********************//
+
+// Mixins pour les breakpoints
+@mixin device($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
+    @media (min-width: #{$laptop}) {
+      @content;
+    }
+  } @else if $breakpoint == xl-laptop {
+    @media (min-width: #{$xl-laptop}) {
+      @content;
+    }
+  }
+}
+
+// Mixin des boutons
+@mixin button-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-family: $font-text;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: inset 0px 0px 0px 0px rgb(255 255 255 / 30%),
+    0px 4px 10px 0px #00000040;
+  background: $purple-gradient;
+  color: $white;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: inset 0px 4px 12px 4px rgb(255 255 255 / 30%),
+      0px 4px 10px 2px #00000040;
+  }
+}
+
+//***************** MIXINS LOADER ***********************//
+
+// Mixin Logique de remplissage du cercle
+@mixin circle-filling {
+  $start-translate: -150%;
+  $end-translate: -50%;
+  $steps: 4;
+  $increment: calc(($start-translate - $end-translate) / ($steps - 1));
+
+  @keyframes circle-filling-anim {
+    @for $i from 1 through $steps {
+      $percentage: calc(($i - 1) * (100% / ($steps - 1)));
+      $translate: calc($start-translate - ($i - 1) * $increment);
+
+      #{$percentage} {
+        transform: translate(-50%, #{$translate});
+      }
+    }
+  }
+
+  & {
+    animation: circle-filling-anim 2.4s 0.6s ease-in-out forwards;
+  }
+}
+
+//Mixin pour le style de la balle
+@mixin loader-ball-style($reverse) {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translateX(calc($small-circle / 2 - $small-ball - 5px))
+    rotate(170deg);
+  transform-origin: -(calc($small-circle / 2 - $small-ball - 5px)) 0px;
+  opacity: 0;
+  background: $purple-gradient;
+  width: $small-ball;
+  height: $small-ball;
+  border-radius: 50%;
+
+  @include device(tablet) {
+    width: $large-ball;
+    height: $large-ball;
+    transform: translateX(calc($large-circle / 2 - $large-ball - 5px))
+      rotate(170deg);
+    transform-origin: -(calc($large-circle / 2 - $large-ball - 5px)) 0px;
+  }
+
+  @if $reverse {
+    @include spin-ball-anim(spin-reverse, $reverse);
+  } @else {
+    @include spin-ball-anim(spin, $reverse);
+  }
+}
+
+//Animation pour les balles
+@mixin spin-ball-anim($name, $reverse) {
+  $rotation: 0deg;
+  $increment: 35deg;
+  $start: if($reverse, 360deg, 170deg);
+  $start-rotate: if($reverse, 220deg, 310deg);
+  $end: if($reverse, 85deg, 445deg);
+
+  @keyframes #{$name} {
+    0% {
+      transform: translate(calc($small-circle / 2 - $small-ball - 5px))
+        rotate($start);
+    }
+    5% {
+      transform: translate(calc($small-circle / 2 - $small-ball - 5px))
+        rotate($start);
+      opacity: 1;
+    }
+
+    @for $i from 0 through 2 {
+      $percentage: if($i == 0, 20, $i * 25 + 20);
+      @if $reverse {
+        $rotation: $start-rotate - ($i * $increment);
+      } @else {
+        $rotation: $start-rotate + ($i * $increment);
+      }
+      #{$percentage + 0%} {
+        transform: translateX(calc($small-circle / 2 - $small-ball - 5px))
+          rotate($rotation);
+      }
+      #{$percentage + 10%} {
+        transform: translateX(calc($small-circle / 2 - $small-ball - 5px))
+          rotate($rotation);
+      }
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(calc($small-circle / 2 - $small-ball - 5px))
+        rotate($end);
+      opacity: 0;
+    }
+  }
+
+  @include device(tablet) {
+    @keyframes #{$name} {
+      0% {
+        transform: translate(calc($large-circle / 2 - $large-ball - 5px))
+          rotate($start);
+      }
+      5% {
+        opacity: 1;
+      }
+
+      @for $i from 0 through 3 {
+        $percentage: if($i == 0, 20, $i * 25 + 20);
+        @if $reverse {
+          $rotation: $start-rotate - ($i * $increment);
+        } @else {
+          $rotation: $start-rotate + ($i * $increment);
+        }
+        #{$percentage + 0%} {
+          transform: translateX(calc($large-circle / 2 - $large-ball - 5px))
+            rotate($rotation);
+        }
+        #{$percentage + 10%} {
+          transform: translateX(calc($large-circle / 2 - $large-ball - 5px))
+            rotate($rotation);
+        }
+      }
+      95% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(calc($large-circle / 2 - $large-ball - 5px))
+          rotate($end);
+        opacity: 0;
+      }
+    }
+  }
+  & {
+    animation: #{$name} 2.5s 0.2s ease-in-out forwards;
+  }
+}

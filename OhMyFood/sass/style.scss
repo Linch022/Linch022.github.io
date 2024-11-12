@@ -1,0 +1,10 @@
+@import './abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/base';
+@import './components/loader';
+@import 'pages/home';
+@import './pages/restaurant';
+@import 'layout/header';
+@import 'layout/footer';
+@import './components/like';
