@@ -45,6 +45,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.checkbox-like {
+  display: none;
+}
+
 .checkbox-like:checked ~ .liked {
   animation: liked 0.5s forwards;
 }

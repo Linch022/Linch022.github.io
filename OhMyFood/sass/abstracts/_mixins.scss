@@ -44,15 +44,17 @@
 
 // Mixin Logique de remplissage du cercle
 @mixin circle-filling {
+//Variables propres à cette mixin qui positionnent le bloc de couleur plus haut pour le faire descendre progressivement et remplir le cercle.
   $start-translate: -150%;
   $end-translate: -50%;
-  $steps: 4;
-  $increment: calc(($start-translate - $end-translate) / ($steps - 1));
+  $steps: 4; // Nombres d'étapes pour remplir le cercle
+  $increment: calc(($start-translate - $end-translate) / ($steps - 1)); // Calcul du % de translate entre chaque étape
 
+  //Animation pour faire descendre le bloc
   @keyframes circle-filling-anim {
     @for $i from 1 through $steps {
-      $percentage: calc(($i - 1) * (100% / ($steps - 1)));
-      $translate: calc($start-translate - ($i - 1) * $increment);
+      $percentage: calc(($i - 1) * (100% / ($steps - 1))); // Calcul du % entre chaque étape de la keyframes pour rythmer l'animation
+      $translate: calc($start-translate - ($i - 1) * $increment); // Calcul de la position du translate
 
       #{$percentage} {
         transform: translate(-50%, #{$translate});
@@ -71,9 +73,9 @@
   content: "";
   top: 50%;
   left: 50%;
-  transform: translateX(calc($small-circle / 2 - $small-ball - 5px))
+  transform: translateX(calc($small-circle / 2 - $small-ball - 5px)) // Calcul pour position la balle à l'intérieur du cercle. On prend : (le diamètre / 2 - La taille de la balle - une marge de 5px) pour que la balle soit proche du bord à l'intérieur du cercle.
     rotate(170deg);
-  transform-origin: -(calc($small-circle / 2 - $small-ball - 5px)) 0px;
+  transform-origin: -(calc($small-circle / 2 - $small-ball - 5px)) 0px; // Calcul pour définir le point d'origine pour la rotation : déplace le centre de rotation vers le bord intérieur du cercle, alignant la balle à cet endroit.
   opacity: 0;
   background: $purple-gradient;
   width: $small-ball;
@@ -95,15 +97,20 @@
   }
 }
 
-//Animation pour les balles
+//Animation pour le déplacement des balles à l'intérieur du cercle
 @mixin spin-ball-anim($name, $reverse) {
-  $rotation: 0deg;
-  $increment: 35deg;
-  $start: if($reverse, 360deg, 170deg);
-  $start-rotate: if($reverse, 220deg, 310deg);
-  $end: if($reverse, 85deg, 445deg);
+  // Reverse qui sert à positionner une balle de chaque côté du cercle
+  //Variables nécessaires au fonctionnement de l'animation
+  $rotation: 0deg; // Ouverture d'une variable pour ensuite l'utiliser pour stocker la valeur de rotation
+  $increment: 35deg; // Degré de rotation entre chaque étape
+  $start: if($reverse, 360deg, 170deg); // Position de la balle au départ
+  $start-rotate: if($reverse, 220deg, 310deg); // Position de la balle à la première étape de rotation
+  $end: if($reverse, 85deg, 445deg); // Position finale de la balle
 
+  // Keyframes d'animation 
   @keyframes #{$name} {
+
+    // Les deux premières étapes d'apparition de la balle 
     0% {
       transform: translate(calc($small-circle / 2 - $small-ball - 5px))
         rotate($start);
@@ -114,13 +121,16 @@
       opacity: 1;
     }
 
+    // Boucle qui permet de déplacer la balle en calculant la rotation à chaque étape
     @for $i from 0 through 2 {
-      $percentage: if($i == 0, 20, $i * 25 + 20);
+      $percentage: if($i == 0, 20, $i * 25 + 20); // Calcul du % de chaque étape de la keyframes
+      // Condition pour faire le calcul de la rotation de la balle de droite ou de gauche
       @if $reverse {
         $rotation: $start-rotate - ($i * $increment);
       } @else {
         $rotation: $start-rotate + ($i * $increment);
       }
+      // Etapes pour la keyframes avec un pourcentage +10% à chaque étape pour que la balle reste sur place un court instant
       #{$percentage + 0%} {
         transform: translateX(calc($small-circle / 2 - $small-ball - 5px))
           rotate($rotation);
@@ -131,15 +141,15 @@
       }
     }
     95% {
-      opacity: 1;
+      opacity: 1; // Sert à garder l'opacité à 1 jusqu'à la fin de l'animation
     }
+    // Positionnement final de la balle et disparission
     100% {
       transform: translateX(calc($small-circle / 2 - $small-ball - 5px))
         rotate($end);
       opacity: 0;
     }
   }
-
   @include device(tablet) {
     @keyframes #{$name} {
       0% {

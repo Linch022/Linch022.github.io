@@ -13,11 +13,20 @@
   background: $white;
 }
 
+.restaurant-picture {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+
+    @include device(tablet) {
+      height: 383px;
+    }
+  }
+
 .restaurant-menu {
   position: relative;
   display: flex;
   flex-direction: column;
-  z-index: 4;
   margin-top: -50px;
   background: $light-grey;
   border-top-left-radius: 40px;
@@ -31,18 +40,23 @@
     margin: -50px auto 0 auto;
   }
 
-  &__title {
+  &__title-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: $font-title;
-    font-size: $large-font;
     padding-left: $smaller-spacing;
 
     @include device(tablet) {
       gap: 30px;
       margin: 0 auto;
     }
+  }
+
+  &__title {
+    font-family: $font-title;
+    font-size: $x-large-font;
+    font-weight: 400;
+    font-style: italic;
   }
 
   &--button {
