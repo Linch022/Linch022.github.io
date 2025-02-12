@@ -41,15 +41,7 @@ for (let i = 0; i < slides.length; i++) {
 	dotsContainer.appendChild(dot);
 
 	dot.addEventListener("click", function() {
-
 		changeSlide(i)
-
-		// bannerImg.src = `./assets/images/slideshow/${slides[i].image}`;
-		// const newSelected = document.getElementById(`dot-${i}`);
-		// const previousSelected = document.querySelector(".dot_selected");
-		// previousSelected.classList.remove("dot_selected");
-		// newSelected.classList.add("dot_selected");
-		// imageText.innerHTML = slides[i].tagLine;
 	})
 }
 
