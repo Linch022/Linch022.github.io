@@ -212,6 +212,9 @@ body {
 	right: 0;
 	z-index: -1;
 }
+.picture.left img, .picture.right img {
+	aspect-ratio: 1/1;
+}
 .form-container {
 	flex : 2;
 
