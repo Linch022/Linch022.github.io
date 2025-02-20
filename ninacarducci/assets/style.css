@@ -6,11 +6,14 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
-.top-header {
-	background-color: white;
+header {
 	position: sticky;
 	top:0;
-	z-index: 1000;
+	z-index: 2;
+
+}
+.top-header {
+	background-color: white;
 	display: flex;
 	justify-content: space-between;
 	padding-inline: 100px;
@@ -147,7 +150,9 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-	font-size: 2.5rem;
+	font-size: calc(1.375rem + 1.5vw);
+	line-height: 1.2;
+	margin-bottom: 0.5rem;
 
 }
 .quote__author {
@@ -259,6 +264,9 @@ button[type="submit"] {
 	form legend {
 		font-size: 2rem;
 	}
+	.quote__text {
+		font-size: 2.5rem;
+	}
 }
 @media all and (max-width: 1180px) {
 	.picture {
@@ -271,7 +279,7 @@ button[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me .about-me__introduction, #about-me p {
 		width: 100%;
 	}
 }
