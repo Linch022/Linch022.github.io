@@ -219,15 +219,23 @@ body {
 	flex : 2;
 
 }
-form {
+form, fieldset {
 	display: flex;
 	flex-direction: column;
-	width: 70%;
+	width: 100%;
 	align-items: flex-start;
 }
 
-form input {
-	width: 100%;
+form legend {
+	font-size: calc(1.325rem + .9vw);
+	margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+form input, form button {
+	width: 70%;
 	background-color: transparent;
 	border: solid 1px;
 	height: 2.5em;
@@ -235,7 +243,7 @@ form input {
 }
 
 form textarea {
-	width: 100%;
+	width: 70%;
 	background-color: transparent;
 	border: solid 1px;
 	height: 5em;
@@ -243,11 +251,15 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
-input[type="submit"] {
+button[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
-
+@media all and (min-width: 1200px) {
+	form legend {
+		font-size: 2rem;
+	}
+}
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
