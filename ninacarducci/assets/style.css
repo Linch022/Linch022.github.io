@@ -98,6 +98,8 @@ header {
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	line-height: 1.2;
+	margin-bottom: 0.5rem;
 }
 
 .title{
@@ -200,6 +202,11 @@ header {
 	z-index: 1;
 }
 
+.service__price p {
+	font-size: calc(1.275rem + .3vw);
+	margin-bottom: 0.5rem;
+	line-height: 1.2;
+}
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
@@ -270,6 +277,9 @@ button[type="submit"] {
 	}
 	.quote__text {
 		font-size: 2.5rem;
+	}
+	.service__price p {
+		font-size: 1.5rem;
 	}
 }
 @media all and (max-width: 1180px) {
