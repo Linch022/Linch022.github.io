@@ -46,6 +46,10 @@ header {
 	height: 20px;
 }
 
+.carousel-img {
+	max-width: 1920px;
+}
+
 #about {
 	display: flex;
 	background-color: #F6D2B8;
